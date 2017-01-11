@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42C2DA231E269030001770CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA221E269030001770CF /* AppDelegate.swift */; };
+		42C2DA251E269030001770CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA241E269030001770CF /* ViewController.swift */; };
+		42C2DA281E269030001770CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA261E269030001770CF /* Main.storyboard */; };
+		42C2DA2A1E269030001770CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA291E269030001770CF /* Assets.xcassets */; };
+		42C2DA2D1E269030001770CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA2B1E269030001770CF /* LaunchScreen.storyboard */; };
+		42C2DA381E269030001770CF /* SimbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA371E269030001770CF /* SimbaTests.swift */; };
+		42C2DA431E269030001770CF /* SimbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA421E269030001770CF /* SimbaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42C2DA341E269030001770CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42C2DA171E269030001770CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42C2DA1E1E269030001770CF;
+			remoteInfo = Simba;
+		};
+		42C2DA3F1E269030001770CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42C2DA171E269030001770CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42C2DA1E1E269030001770CF;
+			remoteInfo = Simba;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42C2DA1F1E269030001770CF /* Simba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simba.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C2DA221E269030001770CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42C2DA241E269030001770CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42C2DA271E269030001770CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42C2DA291E269030001770CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42C2DA2C1E269030001770CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42C2DA2E1E269030001770CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C2DA331E269030001770CF /* SimbaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C2DA371E269030001770CF /* SimbaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimbaTests.swift; sourceTree = "<group>"; };
+		42C2DA391E269030001770CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C2DA3E1E269030001770CF /* SimbaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C2DA421E269030001770CF /* SimbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimbaUITests.swift; sourceTree = "<group>"; };
+		42C2DA441E269030001770CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42C2DA1C1E269030001770CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2DA301E269030001770CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2DA3B1E269030001770CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42C2DA161E269030001770CF = {
+			isa = PBXGroup;
+			children = (
+				42C2DA211E269030001770CF /* Simba */,
+				42C2DA361E269030001770CF /* SimbaTests */,
+				42C2DA411E269030001770CF /* SimbaUITests */,
+				42C2DA201E269030001770CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42C2DA201E269030001770CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42C2DA1F1E269030001770CF /* Simba.app */,
+				42C2DA331E269030001770CF /* SimbaTests.xctest */,
+				42C2DA3E1E269030001770CF /* SimbaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42C2DA211E269030001770CF /* Simba */ = {
+			isa = PBXGroup;
+			children = (
+				42C2DA221E269030001770CF /* AppDelegate.swift */,
+				42C2DA241E269030001770CF /* ViewController.swift */,
+				42C2DA261E269030001770CF /* Main.storyboard */,
+				42C2DA291E269030001770CF /* Assets.xcassets */,
+				42C2DA2B1E269030001770CF /* LaunchScreen.storyboard */,
+				42C2DA2E1E269030001770CF /* Info.plist */,
+			);
+			path = Simba;
+			sourceTree = "<group>";
+		};
+		42C2DA361E269030001770CF /* SimbaTests */ = {
+			isa = PBXGroup;
+			children = (
+				42C2DA371E269030001770CF /* SimbaTests.swift */,
+				42C2DA391E269030001770CF /* Info.plist */,
+			);
+			path = SimbaTests;
+			sourceTree = "<group>";
+		};
+		42C2DA411E269030001770CF /* SimbaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				42C2DA421E269030001770CF /* SimbaUITests.swift */,
+				42C2DA441E269030001770CF /* Info.plist */,
+			);
+			path = SimbaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42C2DA1E1E269030001770CF /* Simba */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C2DA471E269030001770CF /* Build configuration list for PBXNativeTarget "Simba" */;
+			buildPhases = (
+				42C2DA1B1E269030001770CF /* Sources */,
+				42C2DA1C1E269030001770CF /* Frameworks */,
+				42C2DA1D1E269030001770CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Simba;
+			productName = Simba;
+			productReference = 42C2DA1F1E269030001770CF /* Simba.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42C2DA321E269030001770CF /* SimbaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C2DA4A1E269030001770CF /* Build configuration list for PBXNativeTarget "SimbaTests" */;
+			buildPhases = (
+				42C2DA2F1E269030001770CF /* Sources */,
+				42C2DA301E269030001770CF /* Frameworks */,
+				42C2DA311E269030001770CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42C2DA351E269030001770CF /* PBXTargetDependency */,
+			);
+			name = SimbaTests;
+			productName = SimbaTests;
+			productReference = 42C2DA331E269030001770CF /* SimbaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		42C2DA3D1E269030001770CF /* SimbaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C2DA4D1E269030001770CF /* Build configuration list for PBXNativeTarget "SimbaUITests" */;
+			buildPhases = (
+				42C2DA3A1E269030001770CF /* Sources */,
+				42C2DA3B1E269030001770CF /* Frameworks */,
+				42C2DA3C1E269030001770CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42C2DA401E269030001770CF /* PBXTargetDependency */,
+			);
+			name = SimbaUITests;
+			productName = SimbaUITests;
+			productReference = 42C2DA3E1E269030001770CF /* SimbaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42C2DA171E269030001770CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Infinum;
+				TargetAttributes = {
+					42C2DA1E1E269030001770CF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					42C2DA321E269030001770CF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 42C2DA1E1E269030001770CF;
+					};
+					42C2DA3D1E269030001770CF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 42C2DA1E1E269030001770CF;
+					};
+				};
+			};
+			buildConfigurationList = 42C2DA1A1E269030001770CF /* Build configuration list for PBXProject "Simba" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42C2DA161E269030001770CF;
+			productRefGroup = 42C2DA201E269030001770CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42C2DA1E1E269030001770CF /* Simba */,
+				42C2DA321E269030001770CF /* SimbaTests */,
+				42C2DA3D1E269030001770CF /* SimbaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42C2DA1D1E269030001770CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C2DA2D1E269030001770CF /* LaunchScreen.storyboard in Resources */,
+				42C2DA2A1E269030001770CF /* Assets.xcassets in Resources */,
+				42C2DA281E269030001770CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2DA311E269030001770CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2DA3C1E269030001770CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42C2DA1B1E269030001770CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C2DA251E269030001770CF /* ViewController.swift in Sources */,
+				42C2DA231E269030001770CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2DA2F1E269030001770CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C2DA381E269030001770CF /* SimbaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2DA3A1E269030001770CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C2DA431E269030001770CF /* SimbaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42C2DA351E269030001770CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42C2DA1E1E269030001770CF /* Simba */;
+			targetProxy = 42C2DA341E269030001770CF /* PBXContainerItemProxy */;
+		};
+		42C2DA401E269030001770CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42C2DA1E1E269030001770CF /* Simba */;
+			targetProxy = 42C2DA3F1E269030001770CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42C2DA261E269030001770CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C2DA271E269030001770CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42C2DA2B1E269030001770CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C2DA2C1E269030001770CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42C2DA451E269030001770CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42C2DA461E269030001770CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42C2DA481E269030001770CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Simba/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.infinum.academy.Simba;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		42C2DA491E269030001770CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Simba/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.infinum.academy.Simba;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		42C2DA4B1E269030001770CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SimbaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.infinum.academy.SimbaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simba.app/Simba";
+			};
+			name = Debug;
+		};
+		42C2DA4C1E269030001770CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SimbaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.infinum.academy.SimbaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simba.app/Simba";
+			};
+			name = Release;
+		};
+		42C2DA4E1E269030001770CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SimbaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.infinum.academy.SimbaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Simba;
+			};
+			name = Debug;
+		};
+		42C2DA4F1E269030001770CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SimbaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.infinum.academy.SimbaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Simba;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42C2DA1A1E269030001770CF /* Build configuration list for PBXProject "Simba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C2DA451E269030001770CF /* Debug */,
+				42C2DA461E269030001770CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42C2DA471E269030001770CF /* Build configuration list for PBXNativeTarget "Simba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C2DA481E269030001770CF /* Debug */,
+				42C2DA491E269030001770CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		42C2DA4A1E269030001770CF /* Build configuration list for PBXNativeTarget "SimbaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C2DA4B1E269030001770CF /* Debug */,
+				42C2DA4C1E269030001770CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		42C2DA4D1E269030001770CF /* Build configuration list for PBXNativeTarget "SimbaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C2DA4E1E269030001770CF /* Debug */,
+				42C2DA4F1E269030001770CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42C2DA171E269030001770CF /* Project object */;
+}
