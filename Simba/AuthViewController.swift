@@ -1,5 +1,5 @@
 //
-//  CredentialsViewController.swift
+//  AuthViewController.swift
 //  Simba
 //
 //  Created by Infinum on 12/01/17.
@@ -8,16 +8,8 @@
 
 import UIKit
 
-class CredentialsViewController: UIViewController {
+class AuthViewController: UIViewController {
 
-    @IBOutlet weak var GivenIDText: UITextField!
-    
-    @IBAction func SendGivenID(_ sender: AnyObject) {
-    }
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

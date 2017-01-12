@@ -15,6 +15,8 @@
 		42C2DA381E269030001770CF /* SimbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA371E269030001770CF /* SimbaTests.swift */; };
 		42C2DA431E269030001770CF /* SimbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA421E269030001770CF /* SimbaUITests.swift */; };
 		42F017BB1E27E48200513B6A /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017BA1E27E48200513B6A /* CredentialsViewController.swift */; };
+		42F017BD1E27F08500513B6A /* PINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017BC1E27F08500513B6A /* PINViewController.swift */; };
+		42F017BF1E27F5BD00513B6A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017BE1E27F5BD00513B6A /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		42C2DA421E269030001770CF /* SimbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimbaUITests.swift; sourceTree = "<group>"; };
 		42C2DA441E269030001770CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42F017BA1E27E48200513B6A /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
+		42F017BC1E27F08500513B6A /* PINViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINViewController.swift; sourceTree = "<group>"; };
+		42F017BE1E27F5BD00513B6A /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				42C2DA221E269030001770CF /* AppDelegate.swift */,
 				42C2DA241E269030001770CF /* ViewController.swift */,
 				42C2DA261E269030001770CF /* Main.storyboard */,
+				42F017BE1E27F5BD00513B6A /* AuthViewController.swift */,
+				42F017BC1E27F08500513B6A /* PINViewController.swift */,
 				42F017BA1E27E48200513B6A /* CredentialsViewController.swift */,
 				42C2DA291E269030001770CF /* Assets.xcassets */,
 				42C2DA2B1E269030001770CF /* LaunchScreen.storyboard */,
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F017BD1E27F08500513B6A /* PINViewController.swift in Sources */,
 				42C2DA251E269030001770CF /* ViewController.swift in Sources */,
+				42F017BF1E27F5BD00513B6A /* AuthViewController.swift in Sources */,
 				42F017BB1E27E48200513B6A /* CredentialsViewController.swift in Sources */,
 				42C2DA231E269030001770CF /* AppDelegate.swift in Sources */,
 			);

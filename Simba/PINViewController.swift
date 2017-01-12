@@ -1,5 +1,5 @@
 //
-//  CredentialsViewController.swift
+//  PINViewController.swift
 //  Simba
 //
 //  Created by Infinum on 12/01/17.
@@ -8,14 +8,12 @@
 
 import UIKit
 
-class CredentialsViewController: UIViewController {
+class PINViewController: UIViewController {
 
-    @IBOutlet weak var GivenIDText: UITextField!
+    @IBOutlet weak var PINtext: UITextField!
     
-    @IBAction func SendGivenID(_ sender: AnyObject) {
+    @IBAction func SendPIN(_ sender: AnyObject) {
     }
-    
-    
     
     
     override func viewDidLoad() {
