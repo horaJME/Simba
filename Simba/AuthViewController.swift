@@ -8,13 +8,15 @@
 
 import UIKit
 
+var PIN2 = ""
+
 class AuthViewController: UIViewController {
 
     @IBOutlet weak var PINText: UITextField!
     
     @IBAction func SendPIN(_ sender: UIButton) {
-        
-        
+        PIN2 = PINText.text!
+        performSegue(withIdentifier: "SuccessSegue", sender: self)
     }
     
     override func viewDidLoad() {

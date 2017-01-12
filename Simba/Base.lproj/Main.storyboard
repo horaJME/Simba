@@ -336,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="1545" y="124"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--Success View Controller-->
         <scene sceneID="5hS-8v-I2e">
             <objects>
-                <viewController id="MtP-rC-9Iw" customClass="AuthViewController" customModule="Simba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MtP-rC-9Iw" customClass="SuccessViewController" customModule="Simba" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Lo-QL-b3t"/>
                         <viewControllerLayoutGuide type="bottom" id="iQU-Md-3aA"/>
@@ -363,7 +363,7 @@
                                             <constraint firstAttribute="height" constant="102" id="ZEp-Rw-85x"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJz-Ah-7NW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJz-Ah-7NW">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -391,6 +391,9 @@
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="5Wa-G8-WhJ" secondAttribute="centerX" id="uY7-Aj-JBg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SuccessLabel" destination="tJz-Ah-7NW" id="Ika-FO-y6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
