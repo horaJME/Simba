@@ -14,6 +14,7 @@
 		42C2DA2D1E269030001770CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA2B1E269030001770CF /* LaunchScreen.storyboard */; };
 		42C2DA381E269030001770CF /* SimbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA371E269030001770CF /* SimbaTests.swift */; };
 		42C2DA431E269030001770CF /* SimbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA421E269030001770CF /* SimbaUITests.swift */; };
+		42F017BB1E27E48200513B6A /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017BA1E27E48200513B6A /* CredentialsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		42C2DA3E1E269030001770CF /* SimbaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C2DA421E269030001770CF /* SimbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimbaUITests.swift; sourceTree = "<group>"; };
 		42C2DA441E269030001770CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F017BA1E27E48200513B6A /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				42C2DA221E269030001770CF /* AppDelegate.swift */,
 				42C2DA241E269030001770CF /* ViewController.swift */,
 				42C2DA261E269030001770CF /* Main.storyboard */,
+				42F017BA1E27E48200513B6A /* CredentialsViewController.swift */,
 				42C2DA291E269030001770CF /* Assets.xcassets */,
 				42C2DA2B1E269030001770CF /* LaunchScreen.storyboard */,
 				42C2DA2E1E269030001770CF /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C2DA251E269030001770CF /* ViewController.swift in Sources */,
+				42F017BB1E27E48200513B6A /* CredentialsViewController.swift in Sources */,
 				42C2DA231E269030001770CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				42C2DA491E269030001770CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42C2DA4A1E269030001770CF /* Build configuration list for PBXNativeTarget "SimbaTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				42C2DA4C1E269030001770CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42C2DA4D1E269030001770CF /* Build configuration list for PBXNativeTarget "SimbaUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				42C2DA4F1E269030001770CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
