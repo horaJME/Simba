@@ -29,31 +29,45 @@
                                             <constraint firstAttribute="height" constant="102" id="v1p-sb-2u1"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYS-bH-XIT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asj-oC-3Mx">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
                                         <state key="normal" title="Identification">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.0" green="0.043137254901960784" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686274509803" green="0.050980392156862744" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="IdentificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TyL-Up-z8U"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asj-oC-3Mx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlF-Fn-T2n">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
                                         <state key="normal" title="Authentication">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.0039215686274509803" green="0.050980392156862744" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="AuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acK-Bp-s3U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="Y8A-et-TMQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="NMh-nP-hos"/>
+                                    <constraint firstAttribute="width" constant="400" id="gj8-Fc-Vof"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8lx-rc-2tH" secondAttribute="trailing" id="3NK-bA-4lI"/>
                             <constraint firstItem="8lx-rc-2tH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AWT-YX-3vw"/>
+                            <constraint firstItem="Y8A-et-TMQ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="30" id="BBO-qX-pCh"/>
+                            <constraint firstItem="Y8A-et-TMQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Btc-at-dYP"/>
                             <constraint firstAttribute="bottomMargin" secondItem="8lx-rc-2tH" secondAttribute="bottom" id="JLI-bb-n7Z"/>
                             <constraint firstItem="8Bf-Oc-GsU" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="QPx-y2-cPB"/>
                             <constraint firstItem="8lx-rc-2tH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dKo-F2-5Et"/>
@@ -68,6 +82,7 @@
     </scenes>
     <resources>
         <image name="background" width="667" height="621"/>
+        <image name="detail" width="293" height="186"/>
         <image name="logo3" width="122" height="62"/>
     </resources>
 </document>

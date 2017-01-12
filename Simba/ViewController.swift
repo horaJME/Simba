@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func IdentificationButton(_ sender: UIButton) {
+        print("ID Process initiated!")
+    }
+    @IBAction func AuthenticationButton(_ sender: UIButton) {
+        print("Auth Process initiated!")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
