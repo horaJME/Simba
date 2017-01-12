@@ -219,6 +219,7 @@
                                         <connections>
                                             <action selector="AuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKN-Ju-0fY"/>
                                             <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="KCG-x3-xKD"/>
+                                            <segue destination="MtP-rC-9Iw" kind="show" id="KTJ-5e-yFM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -337,6 +338,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBl-zv-sAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1545" y="124"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="5hS-8v-I2e">
+            <objects>
+                <viewController id="MtP-rC-9Iw" customClass="AuthViewController" customModule="Simba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Lo-QL-b3t"/>
+                        <viewControllerLayoutGuide type="bottom" id="iQU-Md-3aA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2eD-IU-Owp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-G8-WhJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="bqu-Om-HbV"/>
+                                    <constraint firstAttribute="width" constant="200" id="kFt-0h-fTR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GWy-4b-D8v"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="NuS-fc-HTO">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="QZL-HA-Zxj">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="TMe-DZ-jFz"/>
+                                            <constraint firstAttribute="height" constant="102" id="ZEp-Rw-85x"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJz-Ah-7NW">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-nw-06l">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="S2G-7h-49J"/>
+                                    <constraint firstAttribute="height" constant="250" id="wSa-xi-Gz8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dE9-nw-06l" firstAttribute="centerX" secondItem="2eD-IU-Owp" secondAttribute="centerX" id="2zX-iX-TPq"/>
+                            <constraint firstAttribute="bottom" secondItem="GWy-4b-D8v" secondAttribute="bottom" id="CBL-4K-5dn"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="NuS-fc-HTO" secondAttribute="centerX" id="Fcg-ai-WOt"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerY" secondItem="5Wa-G8-WhJ" secondAttribute="centerY" id="Vax-Ze-BUM"/>
+                            <constraint firstItem="NuS-fc-HTO" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="centerY" constant="10" id="bd8-2A-zNY"/>
+                            <constraint firstItem="NuS-fc-HTO" firstAttribute="centerX" secondItem="2eD-IU-Owp" secondAttribute="centerX" id="cXZ-n5-Kvz"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="top" secondItem="2eD-IU-Owp" secondAttribute="top" id="fIe-Xa-Zlx"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="leading" secondItem="2eD-IU-Owp" secondAttribute="leading" id="oeH-8X-Ryu"/>
+                            <constraint firstItem="dE9-nw-06l" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="bottom" constant="30" id="sPW-nI-WfO"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="5Wa-G8-WhJ" secondAttribute="centerX" id="uY7-Aj-JBg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="885"/>
         </scene>
     </scenes>
     <resources>
