@@ -10,6 +10,13 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
+    @IBOutlet weak var AuthPINText: UITextField!
+    
+    
+    @IBAction func AuthButton(_ sender: AnyObject) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

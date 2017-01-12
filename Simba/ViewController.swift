@@ -8,16 +8,22 @@
 
 import UIKit
 
+var ID = ""
+var PIN = ""
+
 class ViewController: UIViewController {
 
     @IBAction func IdentificationButton(_ sender: UIButton) {
         print("ID Process initiated!")
-    }
+        performSegue(withIdentifier: "IDSegue", sender: self)
+        
+    }    
+    
     @IBAction func AuthenticationButton(_ sender: UIButton) {
-        print("Auth Process initiated!")
+    print("Auth Process initiated!")
+    print(ID)
+    print(PIN)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
