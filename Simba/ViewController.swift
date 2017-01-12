@@ -19,11 +19,14 @@ class ViewController: UIViewController {
         
     }    
     
-    @IBAction func AuthenticationButton(_ sender: UIButton) {
-    print("Auth Process initiated!")
-    print(ID)
-    print(PIN)
+    @IBAction func AuthButton(_ sender: UIButton) {
+        print("Auth Process initiated!")
+        print(ID)
+        print(PIN)
+        performSegue(withIdentifier: "AuthSegue", sender: self)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
