@@ -9,6 +9,10 @@
 import UIKit
 
 class SuccessViewController: UIViewController {
+    
+    
+    @IBOutlet weak var SuccessLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +20,15 @@ class SuccessViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if PIN == PIN2 {
+            SuccessLabel.text = "AUTHENTICATION SUCCESSFUL!"
+        }
+        else {
+            SuccessLabel.text = "AUTHENTICATION FAILED!"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

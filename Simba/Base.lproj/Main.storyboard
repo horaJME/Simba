@@ -51,8 +51,8 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="AuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acK-Bp-s3U"/>
-                                            <segue destination="DvQ-G2-zMV" kind="show" identifier="AuthSegue" id="2Co-pM-K45"/>
+                                            <action selector="AuthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ti5-X0-8z3"/>
+                                            <segue destination="DvQ-G2-zMV" kind="show" identifier="AuthSegue" id="QYF-op-yiV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -131,9 +131,8 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="AuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdJ-bT-efM"/>
                                             <action selector="SendGivenID:" destination="hDX-Ng-iJY" eventType="touchUpInside" id="UM3-Gq-5tY"/>
-                                            <segue destination="xBw-9k-43b" kind="show" id="znx-bw-vSB"/>
+                                            <segue destination="xBw-9k-43b" kind="show" identifier="GivenIDSegue" id="znx-bw-vSB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -217,9 +216,8 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="AuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKN-Ju-0fY"/>
-                                            <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="KCG-x3-xKD"/>
-                                            <segue destination="MtP-rC-9Iw" kind="show" id="KTJ-5e-yFM"/>
+                                            <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="xlK-U0-tqE"/>
+                                            <segue destination="MtP-rC-9Iw" kind="show" identifier="SuccessSegue" id="KTJ-5e-yFM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -246,7 +244,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="PINtext" destination="sDf-p1-bch" id="nHI-s7-fh5"/>
+                        <outlet property="PINText" destination="sDf-p1-bch" id="UBg-6L-dGB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt4-ao-p7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,9 +301,8 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="AuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Byu-XF-wGN"/>
                                             <action selector="SendPIN:" destination="xBw-9k-43b" eventType="touchUpInside" id="LC8-DU-4ZB"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="pOU-Mn-70i"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="PINSegue" id="pOU-Mn-70i"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -339,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="1545" y="124"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--Success View Controller-->
         <scene sceneID="5hS-8v-I2e">
             <objects>
-                <viewController id="MtP-rC-9Iw" customClass="AuthViewController" customModule="Simba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MtP-rC-9Iw" customClass="SuccessViewController" customModule="Simba" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Lo-QL-b3t"/>
                         <viewControllerLayoutGuide type="bottom" id="iQU-Md-3aA"/>
@@ -366,7 +363,7 @@
                                             <constraint firstAttribute="height" constant="102" id="ZEp-Rw-85x"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJz-Ah-7NW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJz-Ah-7NW">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -394,6 +391,9 @@
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="5Wa-G8-WhJ" secondAttribute="centerX" id="uY7-Aj-JBg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SuccessLabel" destination="tJz-Ah-7NW" id="Ika-FO-y6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

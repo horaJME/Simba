@@ -13,6 +13,9 @@ class PINViewController: UIViewController {
     @IBOutlet weak var PINtext: UITextField!
     
     @IBAction func SendPIN(_ sender: AnyObject) {
+        
+        PIN = PINtext.text!
+        performSegue(withIdentifier: "PINSegue", sender: self)
     }
     
     

@@ -13,6 +13,8 @@ class CredentialsViewController: UIViewController {
     @IBOutlet weak var GivenIDText: UITextField!
     
     @IBAction func SendGivenID(_ sender: AnyObject) {
+        ID = GivenIDText.text!
+        performSegue(withIdentifier: "GivenIDSegue", sender: self)
     }
     
     
