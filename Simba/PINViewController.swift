@@ -11,6 +11,7 @@ import UIKit
 class PINViewController: UIViewController {
 
     @IBOutlet weak var PINtext: UITextField!
+    @IBOutlet weak var PINretext: UITextField!
     
     @IBAction func SendPIN(_ sender: AnyObject) {
         

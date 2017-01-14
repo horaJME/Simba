@@ -292,6 +292,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reinsert PIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-4Q-RIu">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-xN-t4O">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="5cm-zT-OHd"/>
+                                            <constraint firstAttribute="height" constant="40" id="bkT-eI-lhf"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-K1-UkE">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -322,13 +336,14 @@
                             <constraint firstItem="ddJ-9X-pwl" firstAttribute="bottom" secondItem="TXt-TR-REW" secondAttribute="bottom" constant="30" id="TdC-gt-U0t"/>
                             <constraint firstItem="4oz-It-u36" firstAttribute="centerX" secondItem="Q4C-qZ-kUM" secondAttribute="centerX" id="btA-Om-4zm"/>
                             <constraint firstItem="4oz-It-u36" firstAttribute="centerX" secondItem="tk4-9F-gpG" secondAttribute="centerX" id="hKc-Bz-kb9"/>
-                            <constraint firstItem="tk4-9F-gpG" firstAttribute="bottom" secondItem="TXt-TR-REW" secondAttribute="centerY" constant="10" id="jqX-Pp-31e"/>
+                            <constraint firstItem="tk4-9F-gpG" firstAttribute="bottom" secondItem="TXt-TR-REW" secondAttribute="centerY" constant="130" id="jqX-Pp-31e"/>
                             <constraint firstItem="ddJ-9X-pwl" firstAttribute="centerX" secondItem="TXt-TR-REW" secondAttribute="centerX" id="tt8-y9-ksV"/>
                             <constraint firstItem="tk4-9F-gpG" firstAttribute="centerX" secondItem="TXt-TR-REW" secondAttribute="centerX" id="zLz-y4-84J"/>
                             <constraint firstAttribute="bottom" secondItem="4oz-It-u36" secondAttribute="bottom" id="zg6-Nb-Vaa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="PINretext" destination="YNJ-xN-t4O" id="CVv-TX-MpH"/>
                         <outlet property="PINtext" destination="eZx-pi-vj9" id="xJQ-aE-N05"/>
                     </connections>
                 </viewController>
