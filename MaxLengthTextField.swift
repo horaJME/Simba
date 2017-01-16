@@ -33,20 +33,22 @@ class MaxLengthTextField: UITextField, UITextFieldDelegate {
         }
     }
     
-    // 1
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        // 2
         guard string.characters.count > 0 else {
             return true
         }
         
-        // 3
         let currentText = textField.text ?? ""
-        // 4
         let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
-        // 5
-        return prospectiveText.characters.count <= maxLength
+        
+        // 1. Here's the first change...
+        return allowedIntoTextField(text: prospectiveText)
+    }
+    
+    // 2. ...and here's the second!
+    func allowedIntoTextField(text: String) -> Bool {
+        return text.characters.count <= maxLength
     }
     
 }

@@ -20,6 +20,7 @@
 		42F017C11E27F8B500513B6A /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C01E27F8B500513B6A /* SuccessViewController.swift */; };
 		42F017C31E2B914000513B6A /* TouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C21E2B914000513B6A /* TouchIDViewController.swift */; };
 		42F017C71E2D713F00513B6A /* MaxLengthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */; };
+		42F017C91E2D73BF00513B6A /* AllowedCharsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		42F017C01E27F8B500513B6A /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		42F017C21E2B914000513B6A /* TouchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDViewController.swift; sourceTree = "<group>"; };
 		42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
+		42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedCharsTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				42C2DA221E269030001770CF /* AppDelegate.swift */,
 				42C2DA241E269030001770CF /* ViewController.swift */,
 				42C2DA261E269030001770CF /* Main.storyboard */,
+				42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */,
 				42F017BE1E27F5BD00513B6A /* AuthViewController.swift */,
 				42F017BC1E27F08500513B6A /* PINViewController.swift */,
 				42F017BA1E27E48200513B6A /* CredentialsViewController.swift */,
@@ -280,6 +283,7 @@
 				42F017BD1E27F08500513B6A /* PINViewController.swift in Sources */,
 				42C2DA251E269030001770CF /* ViewController.swift in Sources */,
 				42F017BF1E27F5BD00513B6A /* AuthViewController.swift in Sources */,
+				42F017C91E2D73BF00513B6A /* AllowedCharsTextField.swift in Sources */,
 				42F017BB1E27E48200513B6A /* CredentialsViewController.swift in Sources */,
 				42F017C71E2D713F00513B6A /* MaxLengthTextField.swift in Sources */,
 				42F017C11E27F8B500513B6A /* SuccessViewController.swift in Sources */,

@@ -198,7 +198,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-p1-bch" customClass="MaxLengthTextField" customModule="Simba" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-p1-bch" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aSW-Cy-h3w"/>
                                             <constraint firstAttribute="width" constant="200" id="maR-WE-8b9"/>
@@ -210,6 +210,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U42-pl-EwQ">
@@ -288,7 +289,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="eZx-pi-vj9" customClass="MaxLengthTextField" customModule="Simba" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="eZx-pi-vj9" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="LjM-Qm-9p9"/>
                                             <constraint firstAttribute="height" constant="40" id="d8D-AA-YfY"/>
@@ -300,6 +301,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm PIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-4Q-RIu">
@@ -307,7 +309,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-xN-t4O" customClass="MaxLengthTextField" customModule="Simba" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-xN-t4O" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="5cm-zT-OHd"/>
                                             <constraint firstAttribute="height" constant="40" id="bkT-eI-lhf"/>
@@ -319,6 +321,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-K1-UkE">
