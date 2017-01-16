@@ -19,6 +19,7 @@
 		42F017BF1E27F5BD00513B6A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017BE1E27F5BD00513B6A /* AuthViewController.swift */; };
 		42F017C11E27F8B500513B6A /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C01E27F8B500513B6A /* SuccessViewController.swift */; };
 		42F017C31E2B914000513B6A /* TouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C21E2B914000513B6A /* TouchIDViewController.swift */; };
+		42F017C51E2D624700513B6A /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F017C41E2D624700513B6A /* TextFieldMaxLengths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		42F017BE1E27F5BD00513B6A /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		42F017C01E27F8B500513B6A /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		42F017C21E2B914000513B6A /* TouchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDViewController.swift; sourceTree = "<group>"; };
+		42F017C41E2D624700513B6A /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				42C2DA221E269030001770CF /* AppDelegate.swift */,
 				42C2DA241E269030001770CF /* ViewController.swift */,
 				42C2DA261E269030001770CF /* Main.storyboard */,
+				42F017C41E2D624700513B6A /* TextFieldMaxLengths.swift */,
 				42F017BE1E27F5BD00513B6A /* AuthViewController.swift */,
 				42F017BC1E27F08500513B6A /* PINViewController.swift */,
 				42F017BA1E27E48200513B6A /* CredentialsViewController.swift */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F017C51E2D624700513B6A /* TextFieldMaxLengths.swift in Sources */,
 				42F017BD1E27F08500513B6A /* PINViewController.swift in Sources */,
 				42C2DA251E269030001770CF /* ViewController.swift in Sources */,
 				42F017BF1E27F5BD00513B6A /* AuthViewController.swift in Sources */,
