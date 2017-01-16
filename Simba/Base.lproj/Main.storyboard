@@ -113,7 +113,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="bpg-TS-xri">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="bpg-TS-xri">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="6D0-Qi-PUL"/>
                                             <constraint firstAttribute="height" constant="40" id="9OZ-nV-WtX"/>
@@ -198,14 +198,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-p1-bch" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-p1-bch" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="aSW-Cy-h3w"/>
                                             <constraint firstAttribute="width" constant="200" id="maR-WE-8b9"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="4"/>
@@ -289,14 +289,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="eZx-pi-vj9" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="eZx-pi-vj9" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="LjM-Qm-9p9"/>
                                             <constraint firstAttribute="height" constant="40" id="d8D-AA-YfY"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="4"/>
@@ -309,14 +309,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-xN-t4O" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-xN-t4O" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="5cm-zT-OHd"/>
                                             <constraint firstAttribute="height" constant="40" id="bkT-eI-lhf"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="4"/>
