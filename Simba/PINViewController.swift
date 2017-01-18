@@ -13,12 +13,36 @@ class PINViewController: UIViewController {
     @IBOutlet weak var PINtext: UITextField!
     @IBOutlet weak var PINretext: UITextField!
     
-    @IBAction func SendPIN(_ sender: AnyObject) {
+    @IBAction func SendPIN(_ sender: UIButton) {
         
-        PIN = PINtext.text!
-        performSegue(withIdentifier: "PINSegue", sender: self)
+        if (PINtext.text?.isEmpty ?? true || PINretext.text?.isEmpty ?? true){
+            
+            // Empty form alert
+        
+            
+            
+            return
+            
+        }
+        else if(PINtext.text! != PINretext.text!) {
+        
+            // PINs dont match alert
+            
+            return
+        }
+        else {
+            
+            // Store data
+            
+            PIN = PINtext.text!
+            
+            // Perform segue
+            
+            performSegue(withIdentifier: "PINSegue", sender: self)
+            
+        }
+        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

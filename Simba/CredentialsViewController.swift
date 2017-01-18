@@ -11,10 +11,30 @@ import UIKit
 class CredentialsViewController: UIViewController {
 
     @IBOutlet weak var GivenIDText: UITextField!
-    
     @IBAction func SendGivenID(_ sender: AnyObject) {
-        ID = GivenIDText.text!
-        performSegue(withIdentifier: "GivenIDSegue", sender: self)
+        
+        // Check for empty fields
+        
+        if (GivenIDText.text?.isEmpty ?? true){
+            
+            // Empty form alert
+            
+            
+            return
+            
+        }
+        else {
+            
+            // Store data
+            
+            ID = GivenIDText.text!
+            
+            // Perform segue
+            
+            performSegue(withIdentifier: "GivenIDSegue", sender: self)
+            
+        }
+
     }
     
     

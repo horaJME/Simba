@@ -131,8 +131,7 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="SendGivenID:" destination="hDX-Ng-iJY" eventType="touchUpInside" id="UM3-Gq-5tY"/>
-                                            <segue destination="xBw-9k-43b" kind="show" identifier="GivenIDSegue" id="znx-bw-vSB"/>
+                                            <action selector="SendGivenID:" destination="hDX-Ng-iJY" eventType="touchUpInside" id="i3M-Gz-Y8O"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -160,6 +159,7 @@
                     </view>
                     <connections>
                         <outlet property="GivenIDText" destination="bpg-TS-xri" id="7bb-PL-SSY"/>
+                        <segue destination="xBw-9k-43b" kind="show" identifier="GivenIDSegue" id="tkW-XQ-Sbz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="346-sW-JHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,8 +333,7 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="SendPIN:" destination="xBw-9k-43b" eventType="touchUpInside" id="LC8-DU-4ZB"/>
-                                            <segue destination="4fG-zv-mRD" kind="show" identifier="PINSegue" id="z8c-3z-mEo"/>
+                                            <action selector="SendPIN:" destination="xBw-9k-43b" eventType="touchUpInside" id="Wbm-e3-v4y"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -363,6 +362,7 @@
                     <connections>
                         <outlet property="PINretext" destination="YNJ-xN-t4O" id="CVv-TX-MpH"/>
                         <outlet property="PINtext" destination="eZx-pi-vj9" id="xJQ-aE-N05"/>
+                        <segue destination="4fG-zv-mRD" kind="show" identifier="PINSegue" action="showDetailViewController:sender:" id="dEp-Rx-LSh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBl-zv-sAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
