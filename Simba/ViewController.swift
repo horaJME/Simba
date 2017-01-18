@@ -8,7 +8,7 @@
 
 import UIKit
 
-var ID = ""
+var DocList = ["mh47330","rw00006","kd35353"]
 var PIN = ""
 
 class ViewController: UIViewController {
@@ -21,8 +21,6 @@ class ViewController: UIViewController {
     
     @IBAction func AuthButton(_ sender: UIButton) {
         print("Auth Process initiated!")
-        print(ID)
-        print(PIN)
         performSegue(withIdentifier: "AuthSegue", sender: self)
     }
     

@@ -20,6 +20,7 @@ class AuthViewController: UIViewController {
             
             // Empty form alert
             
+            displayAlertMessage(userMessage: "Please enter PIN")
             
             return
             
@@ -37,7 +38,17 @@ class AuthViewController: UIViewController {
         }
     }
     
-
+    func displayAlertMessage (userMessage: String) {
+        
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

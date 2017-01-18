@@ -19,25 +19,39 @@ class CredentialsViewController: UIViewController {
             
             // Empty form alert
             
+            displayAlertMessage(userMessage: "Please insert given ID")
             
             return
             
         }
-        else {
-            
-            // Store data
-            
-            ID = GivenIDText.text!
-            
+        else if (DocList.contains(GivenIDText.text!)) {
+        
             // Perform segue
             
-            performSegue(withIdentifier: "GivenIDSegue", sender: self)
+             performSegue(withIdentifier: "GivenIDSegue", sender: self)
+            
+        }
+        else {
+            
+            // User not defined alert
+            
+             displayAlertMessage(userMessage: "ID not defined in system")
             
         }
 
     }
     
+    func displayAlertMessage (userMessage: String) {
     
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+    
+    }
     
     
     override func viewDidLoad() {

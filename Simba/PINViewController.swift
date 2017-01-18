@@ -18,8 +18,13 @@ class PINViewController: UIViewController {
         if (PINtext.text?.isEmpty ?? true || PINretext.text?.isEmpty ?? true){
             
             // Empty form alert
-        
             
+            displayAlertMessage(userMessage: "Please fill both PIN fields")
+            
+            // Clearing text fields
+            
+            PINtext.text = nil
+            PINretext.text = nil
             
             return
             
@@ -28,7 +33,26 @@ class PINViewController: UIViewController {
         
             // PINs dont match alert
             
+            displayAlertMessage(userMessage: "PINs dont match, please try again")
+            
+            // Clearing text fields 
+            
+            PINtext.text = nil
+            PINretext.text = nil
+            
             return
+        }
+        else if (PINtext.text!.characters.count != 4){
+        
+            // PINs need 4 nums
+            
+            displayAlertMessage(userMessage: "PIN has to contain 4 numbers")
+            
+            // Clearing text fields
+            
+            PINtext.text = nil
+            PINretext.text = nil
+        
         }
         else {
             
@@ -41,6 +65,18 @@ class PINViewController: UIViewController {
             performSegue(withIdentifier: "PINSegue", sender: self)
             
         }
+        
+    }
+    
+    func displayAlertMessage (userMessage: String) {
+        
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
         
     }
     
