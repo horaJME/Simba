@@ -15,9 +15,29 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var PINText: UITextField!
     
     @IBAction func SendPIN(_ sender: UIButton) {
-        PIN2 = PINText.text!
-        performSegue(withIdentifier: "SuccessSegue", sender: self)
+        
+        if (PINText.text?.isEmpty ?? true){
+            
+            // Empty form alert
+            
+            
+            return
+            
+        }
+        else {
+            
+            // Store data
+            
+            PIN2 = PINText.text!
+
+            
+            // Perform segue
+            
+            performSegue(withIdentifier: "SuccessSegue", sender: self)
+        }
     }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
