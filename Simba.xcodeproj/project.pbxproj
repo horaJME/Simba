@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3155986F36B392B1E654C729 /* Pods_Simba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E130C20FE1A40CEA99A7D954 /* Pods_Simba.framework */; };
 		42C2DA231E269030001770CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA221E269030001770CF /* AppDelegate.swift */; };
 		42C2DA251E269030001770CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA241E269030001770CF /* ViewController.swift */; };
 		42C2DA281E269030001770CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA261E269030001770CF /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D4CC6E65172A7AFD97E3E6 /* Pods-Simba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simba.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simba/Pods-Simba.debug.xcconfig"; sourceTree = "<group>"; };
 		42C2DA1F1E269030001770CF /* Simba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C2DA221E269030001770CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C2DA241E269030001770CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		42F017C21E2B914000513B6A /* TouchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDViewController.swift; sourceTree = "<group>"; };
 		42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
 		42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedCharsTextField.swift; sourceTree = "<group>"; };
+		D1BB7DF9D4BD1135D14DEB6B /* Pods-Simba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simba.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simba/Pods-Simba.release.xcconfig"; sourceTree = "<group>"; };
+		E130C20FE1A40CEA99A7D954 /* Pods_Simba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3155986F36B392B1E654C729 /* Pods_Simba.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11D648ADE874B40E2993959F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16D4CC6E65172A7AFD97E3E6 /* Pods-Simba.debug.xcconfig */,
+				D1BB7DF9D4BD1135D14DEB6B /* Pods-Simba.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B523E083FB39548F128F265 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E130C20FE1A40CEA99A7D954 /* Pods_Simba.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		42C2DA161E269030001770CF = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +120,8 @@
 				42C2DA361E269030001770CF /* SimbaTests */,
 				42C2DA411E269030001770CF /* SimbaUITests */,
 				42C2DA201E269030001770CF /* Products */,
+				11D648ADE874B40E2993959F /* Pods */,
+				2B523E083FB39548F128F265 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C2DA471E269030001770CF /* Build configuration list for PBXNativeTarget "Simba" */;
 			buildPhases = (
+				BD6F9A4AB157C9500660F688 /* [CP] Check Pods Manifest.lock */,
 				42C2DA1B1E269030001770CF /* Sources */,
 				42C2DA1C1E269030001770CF /* Frameworks */,
 				42C2DA1D1E269030001770CF /* Resources */,
+				BAB2DB1C40DFE04E75B298B8 /* [CP] Embed Pods Frameworks */,
+				9E4831E922862C8CDAB2EDF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +301,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E4831E922862C8CDAB2EDF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simba/Pods-Simba-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB2DB1C40DFE04E75B298B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simba/Pods-Simba-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD6F9A4AB157C9500660F688 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42C2DA1B1E269030001770CF /* Sources */ = {
@@ -438,6 +513,7 @@
 		};
 		42C2DA481E269030001770CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D4CC6E65172A7AFD97E3E6 /* Pods-Simba.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Simba/Info.plist;
@@ -451,6 +527,7 @@
 		};
 		42C2DA491E269030001770CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1BB7DF9D4BD1135D14DEB6B /* Pods-Simba.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Simba/Info.plist;
