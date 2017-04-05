@@ -26,19 +26,12 @@ class CredentialsViewController: UIViewController {
             
         }
         
-        Alamofire.request("http://192.168.5.10/my-rest-api/api/user/mh47330").responseString { response in
+        let URL = "http://192.168.5.10/my-rest-api/api/user/" + (GivenIDText.text)!
+        
+        Alamofire.request(URL).responseString { response in
             
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            
-            print(response.result.value)   // result of response serialization
- 
-            /*
-             if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-            */
+            let result = response.result.value!  // result of response serialization
+            print(result)
         }
 
         
