@@ -25,7 +25,24 @@ class CredentialsViewController: UIViewController {
             return
             
         }
-        else if (DocList.contains(GivenIDText.text!)) {
+        
+        Alamofire.request("http://192.168.5.10/my-rest-api/api/user/mh47330").responseString { response in
+            
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            
+            print(response.result.value)   // result of response serialization
+ 
+            /*
+             if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+            */
+        }
+
+        
+        if (DocList.contains(GivenIDText.text!)) {
         
             // Perform segue
             
