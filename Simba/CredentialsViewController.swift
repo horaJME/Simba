@@ -10,6 +10,34 @@ import UIKit
 import Alamofire
 
 class CredentialsViewController: UIViewController {
+    
+    func getUser(completionHandler: @escaping (String, Error?) -> ()){
+        let User = GivenIDText.text!
+        makeCall(User: User, completionHandler: completionHandler)
+    }
+    
+    func makeCall (User: String, completionHandler: @escaping (String, Error?) -> ()){
+        
+        let URL = "http://192.168.5.10/my-rest-api/api/user/" + (User)
+        
+        Alamofire.request(URL).validate().responseString { response in
+            
+            switch response.result{
+            case .success(let value):
+                let result = response.result.value! // result of response serialization
+                print(result)
+                print("Communication Successful!")
+                completionHandler(value, nil)
+            case .failure(let Error):
+                print(Error)
+                completionHandler(Error as! String, nil)
+            }
+        }
+    
+    }
+    
+    
+    
 
     @IBOutlet weak var GivenIDText: UITextField!
     @IBAction func SendGivenID(_ sender: AnyObject) {
@@ -26,29 +54,28 @@ class CredentialsViewController: UIViewController {
             
         }
         
-        let URL = "http://192.168.5.10/my-rest-api/api/user/" + (GivenIDText.text)!
+       
+        self.getUser() { responseObject, error in
         
-        Alamofire.request(URL).responseString { response in
-            
-            let result = response.result.value!  // result of response serialization
-            print(result)
-        }
-
-        
-        if (DocList.contains(GivenIDText.text!)) {
-        
-            // Perform segue
-            
-             performSegue(withIdentifier: "GivenIDSegue", sender: self)
-            
-        }
-        else {
-            
-            // User not defined alert
-            
-             displayAlertMessage(userMessage: "ID not defined in system")
+            if (responseObject == "User exists") {
+                
+                // Perform segue
+                
+                self.performSegue(withIdentifier: "GivenIDSegue", sender: self)
+                
+            }
+            else {
+                
+                // User not defined alert
+                
+                self.displayAlertMessage(userMessage: "ID not defined in system")
+                
+            }
             
         }
+        
+        
+        
 
     }
     
