@@ -20,9 +20,9 @@ class CredentialsViewController: UIViewController {
     
     func makeCall (User: String, completionHandler: @escaping (String, Error?) -> ()){
         
-        let URL = "http://192.168.5.10/my-rest-api/api/user/" + (User)
+        let callURL = URL + "user/" + (User)
         
-        Alamofire.request(URL).validate().responseString { response in
+        Alamofire.request(callURL).validate().responseString { response in
             
             switch response.result{
             case .success(let value):
@@ -32,8 +32,6 @@ class CredentialsViewController: UIViewController {
                 completionHandler(value, nil)
             case .failure(let Error):
                 print(Error)
-                
-                //AKO SERVER NE RADI
                 print("Communication cannot be established!")
                 completionHandler(Error as! String, nil)
             }

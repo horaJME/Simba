@@ -7,10 +7,42 @@
 //
 
 import UIKit
+import Alamofire
 
 class PINViewController: UIViewController {
     
+    //Variable passed through ID segue
+    
     var user: String?
+    
+    //Alamofire completion handler functions
+    
+    func setPIN(completionHandler: @escaping (String, Error?) -> ()){
+        let User = user
+        makeCall(User: User!, completionHandler: completionHandler)
+    }
+    
+    func makeCall (User: String, completionHandler: @escaping (String, Error?) -> ()){
+        
+        let callURL = URL + "PIN"
+        
+        Alamofire.request(callURL).validate().responseString { response in
+            
+            switch response.result{
+            case .success(let value):
+                let result = response.result.value! // result of response serialization
+                print(result)
+                print("Communication Successful!")
+                completionHandler(value, nil)
+            case .failure(let Error):
+                print(Error)
+                print("Communication cannot be established!")
+                completionHandler(Error as! String, nil)
+            }
+        }
+        
+    }
+
 
     @IBOutlet weak var PINtext: UITextField!
     @IBOutlet weak var PINretext: UITextField!
