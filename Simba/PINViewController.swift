@@ -9,6 +9,8 @@
 import UIKit
 
 class PINViewController: UIViewController {
+    
+    var user: String?
 
     @IBOutlet weak var PINtext: UITextField!
     @IBOutlet weak var PINretext: UITextField!
@@ -58,9 +60,15 @@ class PINViewController: UIViewController {
             
             // Store data
             
+            //SENDING DATA TO WEB SERVER
+            //MOZDA POSLAT I KORISNIKA NEKIM PUTEM
+            //POST USER I PIN
+            
             PIN = PINtext.text!
             
             // Perform segue
+            
+            //PREUZET DATOTEKU S OTPOVIMA
             
             performSegue(withIdentifier: "PINSegue", sender: self)
             
@@ -82,7 +90,6 @@ class PINViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

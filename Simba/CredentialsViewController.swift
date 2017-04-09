@@ -11,6 +11,8 @@ import Alamofire
 
 class CredentialsViewController: UIViewController {
     
+    //Alamofire completion handler functions
+    
     func getUser(completionHandler: @escaping (String, Error?) -> ()){
         let User = GivenIDText.text!
         makeCall(User: User, completionHandler: completionHandler)
@@ -30,15 +32,15 @@ class CredentialsViewController: UIViewController {
                 completionHandler(value, nil)
             case .failure(let Error):
                 print(Error)
+                
+                //AKO SERVER NE RADI
+                print("Communication cannot be established!")
                 completionHandler(Error as! String, nil)
             }
         }
     
     }
     
-    
-    
-
     @IBOutlet weak var GivenIDText: UITextField!
     @IBAction func SendGivenID(_ sender: AnyObject) {
         
@@ -61,7 +63,7 @@ class CredentialsViewController: UIViewController {
                 
                 // Perform segue
                 
-                self.performSegue(withIdentifier: "GivenIDSegue", sender: self)
+                self.performSegue(withIdentifier: "GivenIDSegue", sender: self.GivenIDText.text)
                 
             }
             else {
@@ -103,6 +105,12 @@ class CredentialsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "GivenIDSegue") {
+            let destination = segue.destination as! PINViewController
+            destination.user = sender as! String?
+        }
+    }
 
     /*
     // MARK: - Navigation

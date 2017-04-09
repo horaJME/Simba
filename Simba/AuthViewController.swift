@@ -28,9 +28,9 @@ class AuthViewController: UIViewController {
         else {
             
             // Store data
+            // Performing segue with passed arguments
             
             PIN2 = PINText.text!
-
             
             // Perform segue
             
