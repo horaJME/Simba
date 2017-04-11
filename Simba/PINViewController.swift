@@ -27,15 +27,16 @@ class PINViewController: UIViewController {
         
         let callURL = URL + "PIN"
         
-        let parameters = ["user": user!, "PIN": PIN]
+        let parameters: Parameters = ["user": user!, "PIN": PIN]
         
         //POST METHOD
         
         Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseString { response in
-            
+        
             switch response.result{
             case .success(let value):
                 let result = response.result.value! // result of response serialization
+            
                 print(result)
                 print("Communication successful!")
                 completionHandler(value, nil)
@@ -104,7 +105,7 @@ class PINViewController: UIViewController {
                 
                 print (responseObject)
                 
-                if (responseObject == "") {
+                if (responseObject == "PIN Added") {
                     
                     // Perform segue
                     
