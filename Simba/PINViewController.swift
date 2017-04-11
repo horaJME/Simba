@@ -19,24 +19,29 @@ class PINViewController: UIViewController {
     
     func setPIN(completionHandler: @escaping (String, Error?) -> ()){
         let User = user
-        makeCall(User: User!, completionHandler: completionHandler)
+        let PIN = PINtext.text!
+        makeCall(User: User!,PIN: PIN, completionHandler: completionHandler)
     }
     
-    func makeCall (User: String, completionHandler: @escaping (String, Error?) -> ()){
+    func makeCall (User: String, PIN: String, completionHandler: @escaping (String, Error?) -> ()){
         
         let callURL = URL + "PIN"
         
-        Alamofire.request(callURL).validate().responseString { response in
+        let parameters = ["user": user!, "PIN": PIN]
+        
+        //POST METHOD
+        
+        Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseString { response in
             
             switch response.result{
             case .success(let value):
                 let result = response.result.value! // result of response serialization
                 print(result)
-                print("Communication Successful!")
+                print("Communication successful!")
                 completionHandler(value, nil)
             case .failure(let Error):
                 print(Error)
-                print("Communication cannot be established!")
+                print("Communication failed!")
                 completionHandler(Error as! String, nil)
             }
         }
@@ -93,16 +98,28 @@ class PINViewController: UIViewController {
             // Store data
             
             //SENDING DATA TO WEB SERVER
-            //MOZDA POSLAT I KORISNIKA NEKIM PUTEM
             //POST USER I PIN
             
-            PIN = PINtext.text!
-            
-            // Perform segue
-            
-            //PREUZET DATOTEKU S OTPOVIMA
-            
-            performSegue(withIdentifier: "PINSegue", sender: self)
+            self.setPIN() { responseObject, error in
+                
+                print (responseObject)
+                
+                if (responseObject == "") {
+                    
+                    // Perform segue
+                    
+                    self.performSegue(withIdentifier: "PINSegue", sender: self)
+                    
+                }
+                else {
+                    
+                    // User not defined alert
+                    
+                    self.displayAlertMessage(userMessage: "PIN already set")
+                    
+                }
+                
+            }
             
         }
         
