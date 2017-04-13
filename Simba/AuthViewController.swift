@@ -7,14 +7,61 @@
 //
 
 import UIKit
-
-var PIN2 = ""
+import Alamofire
 
 class AuthViewController: UIViewController {
+    
+    var OTP: String?
+
+    
+    //Alamofire completion handler functions
+    //PIN POSTING FUNCTIONS
+    
+    func Auth(completionHandler: @escaping (String, Error?) -> ()){
+        let otp = OTP
+        let User = IDText.text!
+        makeCall(User: User,OTP: otp!, completionHandler: completionHandler)
+    }
+    
+    func makeCall (User: String, OTP: String, completionHandler: @escaping (String, Error?) -> ()){
+        
+        let callURL = URL + "auth"
+        
+        let parameters: Parameters = ["user": User, "OTP": OTP]
+        
+        //POST METHOD
+        
+        Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseString { response in
+            
+            switch response.result{
+            case .success(let value):
+                let result = response.result.value! // result of response serialization
+                print(result)
+                print("Communication successful!")
+                completionHandler(value, nil)
+            case .failure(let Error):
+                print(Error)
+                print("Communication failed!")
+                completionHandler(Error as! String, nil)
+            }
+        }
+        
+    }
+
 
     @IBOutlet weak var PINText: UITextField!
+    @IBOutlet weak var IDText: UITextField!
+    
+    @IBAction func Home(_ sender: AnyObject) {
+        
+        performSegue(withIdentifier: "AuthHomeSegue", sender: self)
+        
+    }
     
     @IBAction func SendPIN(_ sender: UIButton) {
+        
+        // Read into OTP list file
+        // Check if user and PIN match
         
         if (PINText.text?.isEmpty ?? true){
             
@@ -26,11 +73,6 @@ class AuthViewController: UIViewController {
             
         }
         else {
-            
-            // Store data
-            // Performing segue with passed arguments
-            
-            PIN2 = PINText.text!
             
             // Perform segue
             

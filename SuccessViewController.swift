@@ -21,12 +21,7 @@ class SuccessViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        if PIN == PIN2 {
-            SuccessLabel.text = "AUTHENTICATION SUCCESSFUL!"
-        }
-        else {
-            SuccessLabel.text = "AUTHENTICATION FAILED!"
-        }
+    
     }
     
     override func didReceiveMemoryWarning() {
