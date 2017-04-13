@@ -8,7 +8,7 @@
 
 import UIKit
 
-var DocList = ["mh47330","rw00006","kd35353"]
+var OTPlist = ""
 var PIN = ""
 let URL = "http://192.168.5.10/my-rest-api/api/"
 

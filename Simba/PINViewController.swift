@@ -16,6 +16,7 @@ class PINViewController: UIViewController {
     var user: String?
     
     //Alamofire completion handler functions
+    //PIN POSTING FUNCTIONS
     
     func setPIN(completionHandler: @escaping (String, Error?) -> ()){
         let User = user
@@ -49,7 +50,35 @@ class PINViewController: UIViewController {
         
     }
 
-
+    //OTP LIST GETTING FUNCTIONS
+    
+    func getOTPlist(completionHandler: @escaping (String, Error?) -> ()){
+        let User = user
+        makeCall(User: User!, completionHandler: completionHandler)
+    }
+    
+    func makeCall (User: String, completionHandler: @escaping (String, Error?) -> ()){
+        
+        let callURL = URL + "OTP/" + (User)
+        
+        Alamofire.request(callURL).validate().responseString { response in
+            
+            switch response.result{
+            case .success(let value):
+                let result = response.result.value! // result of response serialization
+                print(result)
+                print("Communication Successful!")
+                completionHandler(value, nil)
+            case .failure(let Error):
+                print(Error)
+                print("Communication cannot be established!")
+                completionHandler(Error as! String, nil)
+            }
+        }
+    }
+    //OUTLETS
+    
+    
     @IBOutlet weak var PINtext: UITextField!
     @IBOutlet weak var PINretext: UITextField!
     
@@ -117,6 +146,21 @@ class PINViewController: UIViewController {
                     
                     self.performSegue(withIdentifier: "PINSegue", sender: self)
                     
+                    self.getOTPlist() { responseObject, error in
+                        
+                        if(responseObject.isEmpty) {
+                        
+                            print("OTP list copying failed")
+                            
+                        }
+                        else{
+                            
+                            //SAVING INTO FILE
+                            OTPlist = responseObject
+                        
+                        }
+                    }
+                    print("OTPlista glasi - " + OTPlist)
                 }
                 else {
                     
