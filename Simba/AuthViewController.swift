@@ -63,6 +63,14 @@ class AuthViewController: UIViewController {
         // Read into OTP list file
         // Check if user and PIN match
         
+        //Future versions reading from file!!!
+        let user = OTPlist["user"].stringValue
+        let counter = OTPlist["counter"].stringValue
+        /////
+        
+        print(user)
+        print(counter)
+        
         if (PINText.text?.isEmpty ?? true){
             
             // Empty form alert
@@ -73,7 +81,6 @@ class AuthViewController: UIViewController {
             
         }
         else {
-            
             
             
             // Perform segue

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class PINViewController: UIViewController {
     
@@ -50,32 +51,6 @@ class PINViewController: UIViewController {
         
     }
 
-    //OTP LIST GETTING FUNCTIONS
-    
-    func getOTPlist(completionHandler: @escaping (String, Error?) -> ()){
-        let User = user
-        makeCall(User: User!, completionHandler: completionHandler)
-    }
-    
-    func makeCall (User: String, completionHandler: @escaping (String, Error?) -> ()){
-        
-        let callURL = URL + "OTP/" + (User)
-        
-        Alamofire.request(callURL).validate().responseString { response in
-            
-            switch response.result{
-            case .success(let value):
-                let result = response.result.value! // result of response serialization
-                print(result)
-                print("Communication Successful!")
-                completionHandler(value, nil)
-            case .failure(let Error):
-                print(Error)
-                print("Communication cannot be established!")
-                completionHandler(Error as! String, nil)
-            }
-        }
-    }
     //OUTLETS
     
     
@@ -146,21 +121,24 @@ class PINViewController: UIViewController {
                     
                     self.performSegue(withIdentifier: "PINSegue", sender: self)
                     
-                    self.getOTPlist() { responseObject, error in
+                    let callURL = URL + "OTP/" + self.user!
+                    
+                    Alamofire.request(callURL).validate().responseJSON { response in
                         
-                        if(responseObject.isEmpty) {
-                        
-                            print("OTP list copying failed")
+                        switch response.result{
+                        case .success(let value):
+                            let json = JSON(value)
                             
-                        }
-                        else{
+                            //Future versions saving into file!!!
+                            OTPlist = json
+                            //////////////
                             
-                            //SAVING INTO FILE
-                            OTPlist = responseObject
-                        
+                            print("JSON: \(json)")
+                        case .failure(let error):
+                            print(error)
+                            
                         }
                     }
-                    print("OTPlista glasi - " + OTPlist)
                 }
                 else {
                     
