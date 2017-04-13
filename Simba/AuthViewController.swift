@@ -8,12 +8,12 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class AuthViewController: UIViewController {
     
     var OTP: String?
 
-    
     //Alamofire completion handler functions
     //PIN POSTING FUNCTIONS
     
@@ -74,9 +74,13 @@ class AuthViewController: UIViewController {
         }
         else {
             
+            
+            
             // Perform segue
             
             performSegue(withIdentifier: "SuccessSegue", sender: self)
+            
+            
         }
     }
     
