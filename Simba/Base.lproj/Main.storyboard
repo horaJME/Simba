@@ -134,6 +134,19 @@
                                             <action selector="SendGivenID:" destination="hDX-Ng-iJY" eventType="touchUpInside" id="i3M-Gz-Y8O"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kz-Fe-not">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Home:" destination="hDX-Ng-iJY" eventType="touchUpInside" id="3ae-Xj-tOf"/>
+                                            <action selector="SendGivenID:" destination="hDX-Ng-iJY" eventType="touchUpInside" id="Vhm-5K-gof"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="tPQ-5h-hdV">
@@ -154,12 +167,13 @@
                             <constraint firstItem="tPQ-5h-hdV" firstAttribute="centerX" secondItem="kY0-K4-e7h" secondAttribute="centerX" id="ZPm-jh-Kkz"/>
                             <constraint firstItem="f9N-iv-Qrn" firstAttribute="leading" secondItem="kY0-K4-e7h" secondAttribute="leading" id="j4K-S1-y8z"/>
                             <constraint firstItem="f9N-iv-Qrn" firstAttribute="top" secondItem="kY0-K4-e7h" secondAttribute="top" id="v1O-dr-Wya"/>
-                            <constraint firstItem="VSS-pC-CMh" firstAttribute="bottom" secondItem="kY0-K4-e7h" secondAttribute="centerY" constant="10" id="ypK-KC-WTD"/>
+                            <constraint firstItem="VSS-pC-CMh" firstAttribute="bottom" secondItem="kY0-K4-e7h" secondAttribute="centerY" constant="81" id="ypK-KC-WTD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="GivenIDText" destination="bpg-TS-xri" id="7bb-PL-SSY"/>
                         <segue destination="xBw-9k-43b" kind="show" identifier="GivenIDSegue" id="tkW-XQ-Sbz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="IDHomeSegue" id="FaJ-Kk-dzo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="346-sW-JHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,7 +290,13 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4oz-It-u36"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tk4-9F-gpG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-9X-pwl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="3tg-CX-vpt"/>
+                                    <constraint firstAttribute="height" constant="250" id="ypJ-h7-cta"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="tk4-9F-gpG">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="krG-tT-DWX">
                                         <constraints>
@@ -336,14 +356,21 @@
                                             <action selector="SendPIN:" destination="xBw-9k-43b" eventType="touchUpInside" id="Wbm-e3-v4y"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogi-VS-bBJ">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Home:" destination="xBw-9k-43b" eventType="touchUpInside" id="Il3-Dc-MLP"/>
+                                            <action selector="SendPIN:" destination="xBw-9k-43b" eventType="touchUpInside" id="m4l-EH-2n3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-9X-pwl">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="3tg-CX-vpt"/>
-                                    <constraint firstAttribute="height" constant="250" id="ypJ-h7-cta"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -353,7 +380,7 @@
                             <constraint firstItem="ddJ-9X-pwl" firstAttribute="bottom" secondItem="TXt-TR-REW" secondAttribute="bottom" constant="30" id="TdC-gt-U0t"/>
                             <constraint firstItem="4oz-It-u36" firstAttribute="centerX" secondItem="Q4C-qZ-kUM" secondAttribute="centerX" id="btA-Om-4zm"/>
                             <constraint firstItem="4oz-It-u36" firstAttribute="centerX" secondItem="tk4-9F-gpG" secondAttribute="centerX" id="hKc-Bz-kb9"/>
-                            <constraint firstItem="tk4-9F-gpG" firstAttribute="bottom" secondItem="TXt-TR-REW" secondAttribute="centerY" constant="130" id="jqX-Pp-31e"/>
+                            <constraint firstItem="tk4-9F-gpG" firstAttribute="bottom" secondItem="TXt-TR-REW" secondAttribute="centerY" constant="194" id="jqX-Pp-31e"/>
                             <constraint firstItem="ddJ-9X-pwl" firstAttribute="centerX" secondItem="TXt-TR-REW" secondAttribute="centerX" id="tt8-y9-ksV"/>
                             <constraint firstItem="tk4-9F-gpG" firstAttribute="centerX" secondItem="TXt-TR-REW" secondAttribute="centerX" id="zLz-y4-84J"/>
                             <constraint firstAttribute="bottom" secondItem="4oz-It-u36" secondAttribute="bottom" id="zg6-Nb-Vaa"/>
@@ -363,6 +390,7 @@
                         <outlet property="PINretext" destination="YNJ-xN-t4O" id="CVv-TX-MpH"/>
                         <outlet property="PINtext" destination="eZx-pi-vj9" id="xJQ-aE-N05"/>
                         <segue destination="4fG-zv-mRD" kind="show" identifier="PINSegue" action="showDetailViewController:sender:" id="dEp-Rx-LSh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="HomeScreenSegue" id="srY-AR-jPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBl-zv-sAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -521,6 +549,6 @@
         <image name="logo3" width="122" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1uF-t9-8hq"/>
+        <segue reference="FaJ-Kk-dzo"/>
     </inferredMetricsTieBreakers>
 </document>

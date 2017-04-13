@@ -40,6 +40,13 @@ class CredentialsViewController: UIViewController {
     }
     
     @IBOutlet weak var GivenIDText: UITextField!
+    @IBAction func Home(_ sender: AnyObject) {
+        
+        performSegue(withIdentifier: "IDHomeSegue", sender: self)
+        
+    }
+    
+    
     @IBAction func SendGivenID(_ sender: AnyObject) {
         
         // Check for empty fields

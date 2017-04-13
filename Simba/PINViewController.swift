@@ -53,6 +53,12 @@ class PINViewController: UIViewController {
     @IBOutlet weak var PINtext: UITextField!
     @IBOutlet weak var PINretext: UITextField!
     
+    @IBAction func Home(_ sender: AnyObject) {
+        
+            performSegue(withIdentifier: "HomeScreenSegue", sender: self)
+        
+    }
+    
     @IBAction func SendPIN(_ sender: UIButton) {
         
         if (PINtext.text?.isEmpty ?? true || PINretext.text?.isEmpty ?? true){
@@ -99,7 +105,7 @@ class PINViewController: UIViewController {
             // Store data
             
             //SENDING DATA TO WEB SERVER
-            //POST USER I PIN
+            //POSTING PIN AND USER
             
             self.setPIN() { responseObject, error in
                 
