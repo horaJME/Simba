@@ -13,6 +13,8 @@ import SwiftyJSON
 class AuthViewController: UIViewController {
     
     var OTP: String?
+    
+    
 
     //Alamofire completion handler functions
     //PIN POSTING FUNCTIONS
@@ -63,15 +65,18 @@ class AuthViewController: UIViewController {
         // Read into OTP list file
         // Check if user and PIN match
         
-        //Future versions reading from file!!!
-        let user = OTPlist["user"].stringValue
-        let counter = OTPlist["counter"].stringValue
-        /////
         
-        print(user)
-        print(counter)
         
-        if (PINText.text?.isEmpty ?? true){
+        if (IDText.text?.isEmpty ?? true){
+            
+            // Empty form alert
+            
+            displayAlertMessage(userMessage: "Please enter ID")
+            
+            return
+            
+        }
+        else if (PINText.text?.isEmpty ?? true){
             
             // Empty form alert
             
@@ -81,6 +86,43 @@ class AuthViewController: UIViewController {
             
         }
         else {
+            
+            //Future versions reading from file!!!
+            let user = OTPlist["user"].stringValue
+            let counter = OTPlist["counter"].intValue
+            /////
+        
+            print(user)
+            print(counter)
+            
+            OTP = OTPlist["OTPlist"][counter]["OTP"].string
+            
+            let callURL = URL + "auth"
+            
+            let parameters: Parameters = ["user": user, "OTP": OTP!]
+
+            print(parameters)
+            
+            
+            Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+                
+                switch response.result{
+                case .success(let value):
+                    let json = JSON(value)
+                    
+                    
+                    //SETTING NEW COUNTER FOR OTP
+                    //WRITING INTO FILE IN FUTURE VERSION
+                    OTPlist["counter"].intValue = OTPlist["counter"].intValue + 1
+                    
+                    
+                    
+                    print("JSON: \(json)")
+                case .failure(let error):
+                    print(error)
+                    
+                }
+            }
             
             
             // Perform segue
@@ -104,6 +146,7 @@ class AuthViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
