@@ -127,7 +127,7 @@ class AuthViewController: UIViewController {
             
             // Perform segue
             
-            performSegue(withIdentifier: "SuccessSegue", sender: self)
+            performSegue(withIdentifier: "SuccessSegue", sender: "Authentication successful")
             
             
         }
@@ -157,7 +157,13 @@ class AuthViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "SuccessSegue") {
+            let destination = segue.destination as! SuccessViewController
+            destination.success = sender as! String?
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
