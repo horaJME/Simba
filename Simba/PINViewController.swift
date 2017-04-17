@@ -37,13 +37,9 @@ class PINViewController: UIViewController {
         
             switch response.result{
             case .success(let value):
-                let result = response.result.value! // result of response serialization
-            
-                print(result)
                 print("Communication successful!")
                 completionHandler(value, nil)
             case .failure(let Error):
-                print(Error)
                 print("Communication failed!")
                 completionHandler(Error as! String, nil)
             }

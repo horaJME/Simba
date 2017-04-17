@@ -26,12 +26,9 @@ class CredentialsViewController: UIViewController {
             
             switch response.result{
             case .success(let value):
-                let result = response.result.value! // result of response serialization
-                print(result)
                 print("Communication Successful!")
                 completionHandler(value, nil)
             case .failure(let Error):
-                print(Error)
                 print("Communication cannot be established!")
                 completionHandler(Error as! String, nil)
             }
