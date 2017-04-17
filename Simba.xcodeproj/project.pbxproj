@@ -203,7 +203,7 @@
 		42F017C01E27F8B500513B6A /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = ../SuccessViewController.swift; sourceTree = "<group>"; };
 		42F017C21E2B914000513B6A /* TouchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchIDViewController.swift; path = ../TouchIDViewController.swift; sourceTree = "<group>"; };
 		42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
-		42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedCharsTextField.swift; sourceTree = "<group>"; };
+		42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllowedCharsTextField.swift; path = Simba/AllowedCharsTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +266,7 @@
 			children = (
 				42B329B01E95054700490EAA /* Alamofire.xcodeproj */,
 				42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */,
+				42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */,
 				42B32A011E9FA8F100490EAA /* SwiftyJSON.xcodeproj */,
 				42C2DA211E269030001770CF /* Simba */,
 				42C2DA361E269030001770CF /* SimbaTests */,
@@ -292,7 +293,6 @@
 				42C2DA221E269030001770CF /* AppDelegate.swift */,
 				42C2DA241E269030001770CF /* ViewController.swift */,
 				42C2DA261E269030001770CF /* Main.storyboard */,
-				42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */,
 				42F017BE1E27F5BD00513B6A /* AuthViewController.swift */,
 				42F017BC1E27F08500513B6A /* PINViewController.swift */,
 				42F017BA1E27E48200513B6A /* CredentialsViewController.swift */,
