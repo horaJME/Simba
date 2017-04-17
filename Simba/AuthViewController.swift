@@ -91,7 +91,7 @@ class AuthViewController: UIViewController {
             let user = OTPlist["user"].stringValue
             let counter = OTPlist["counter"].intValue
             /////
-
+        
             print(user)
             print(counter)
             
@@ -110,7 +110,7 @@ class AuthViewController: UIViewController {
                 case .success(let value):
                     let json = JSON(value)
                     
-                    print(UserDefaults.standard.object(forKey: user))
+                    
                     //SETTING NEW COUNTER FOR OTP
                     //WRITING INTO FILE IN FUTURE VERSION
                     OTPlist["counter"].intValue = OTPlist["counter"].intValue + 1
