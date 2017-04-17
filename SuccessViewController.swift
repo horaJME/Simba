@@ -18,7 +18,8 @@ class SuccessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UILabel.text! = success
+        SuccessLabel.text! = success!
+        
         
         // Do any additional setup after loading the view.
     }
