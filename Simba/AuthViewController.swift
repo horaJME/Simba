@@ -65,7 +65,13 @@ class AuthViewController: UIViewController {
         // Read into OTP list file
         // Check if user and PIN match
         
+        //Future versions reading from file!!!
+        let user = OTPlist["user"].stringValue
+        let counter = OTPlist["counter"].intValue
+        /////
         
+        print(user)
+        print(counter)
         
         if (IDText.text?.isEmpty ?? true){
             
@@ -85,15 +91,13 @@ class AuthViewController: UIViewController {
             return
             
         }
+        else if(PINText.text != OTPlist["PIN"].stringValue){
+        
+            displayAlertMessage(userMessage: "No user with such ID and PIN combination!")
+        
+        }
         else {
             
-            //Future versions reading from file!!!
-            let user = OTPlist["user"].stringValue
-            let counter = OTPlist["counter"].intValue
-            /////
-        
-            print(user)
-            print(counter)
             
             OTP = OTPlist["OTPlist"][counter]["OTP"].string
             
