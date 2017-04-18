@@ -125,6 +125,9 @@ class PINViewController: UIViewController {
                         case .success(let value):
                             let json = JSON(value)
                             
+                            UserDefaults.standard.set(json.rawString(), forKey: self.user!)
+                            UserDefaults.standard.synchronize()
+                            
                             //Future versions saving into file!!!
                             OTPlist = json
                             //////////////

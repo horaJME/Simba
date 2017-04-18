@@ -65,9 +65,11 @@ class AuthViewController: UIViewController {
         // Read into OTP list file
         // Check if user and PIN match
         
-        //Future versions reading from file!!!
-        let user = OTPlist["user"].stringValue
-        let counter = OTPlist["counter"].intValue
+        let value = UserDefaults.standard.string(forKey: IDText.text!)
+        var file = JSON.init(parseJSON: value!)
+
+        let user = file["user"].stringValue
+        let counter = file["counter"].intValue
         /////
         
         print(user)
@@ -91,7 +93,7 @@ class AuthViewController: UIViewController {
             return
             
         }
-        else if(PINText.text != OTPlist["PIN"].stringValue){
+        else if(PINText.text != file["PIN"].stringValue){
         
             displayAlertMessage(userMessage: "No user with such ID and PIN combination!")
         
@@ -99,7 +101,7 @@ class AuthViewController: UIViewController {
         else {
             
             
-            OTP = OTPlist["OTPlist"][counter]["OTP"].string
+            OTP = file["OTPlist"][counter]["OTP"].string
             
             let callURL = URL + "auth"
             
@@ -114,12 +116,10 @@ class AuthViewController: UIViewController {
                 case .success(let value):
                     let json = JSON(value)
                     
-                    
                     //SETTING NEW COUNTER FOR OTP
-                    //WRITING INTO FILE IN FUTURE VERSION
-                    OTPlist["counter"].intValue = OTPlist["counter"].intValue + 1
-                    
-                    
+                    file["counter"].intValue = file["counter"].intValue + 1
+                    UserDefaults.standard.set(file.rawString(), forKey: user)
+                    UserDefaults.standard.synchronize()
                     
                     print("JSON: \(json)")
                 case .failure(let error):
