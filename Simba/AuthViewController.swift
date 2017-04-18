@@ -117,7 +117,7 @@ class AuthViewController: UIViewController {
                     let json = JSON(value)
                     
                     //SETTING NEW COUNTER FOR OTP
-                    file["counter"].intValue = file["counter"].intValue + 1
+                    file["counter"].intValue = (file["counter"].intValue + 1)%10
                     UserDefaults.standard.set(file.rawString(), forKey: user)
                     UserDefaults.standard.synchronize()
                     

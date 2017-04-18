@@ -9,7 +9,6 @@
 import UIKit
 import SwiftyJSON
 
-var OTPlist: JSON = JSON.null
 let URL = "http://192.168.5.10/my-rest-api/api/"
 
 class ViewController: UIViewController {

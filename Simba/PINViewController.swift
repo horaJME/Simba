@@ -124,15 +124,10 @@ class PINViewController: UIViewController {
                         switch response.result{
                         case .success(let value):
                             let json = JSON(value)
-                            
                             UserDefaults.standard.set(json.rawString(), forKey: self.user!)
                             UserDefaults.standard.synchronize()
-                            
-                            //Future versions saving into file!!!
-                            OTPlist = json
-                            //////////////
-                            
                             print("JSON: \(json)")
+                            
                         case .failure(let error):
                             print(error)
                             
