@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-rc-2tH"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="8Bf-Oc-GsU">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Bf-Oc-GsU">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="Ewt-Zn-vkr">
                                         <constraints>
@@ -29,19 +29,11 @@
                                             <constraint firstAttribute="height" constant="102" id="v1p-sb-2u1"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asj-oC-3Mx">
-                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Identification">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.0039215686274509803" green="0.050980392156862744" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="IdentificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TyL-Up-z8U"/>
-                                            <segue destination="hDX-Ng-iJY" kind="show" identifier="IDSegue" id="HEb-99-8Kt"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-5M-VfB">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlF-Fn-T2n">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -53,6 +45,24 @@
                                         <connections>
                                             <action selector="AuthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ti5-X0-8z3"/>
                                             <segue destination="DvQ-G2-zMV" kind="show" identifier="AuthSegue" id="QYF-op-yiV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---- or ----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zp-I6-eBc">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asj-oC-3Mx">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Identification">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686274509803" green="0.050980392156862744" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="IdentificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TyL-Up-z8U"/>
+                                            <segue destination="hDX-Ng-iJY" kind="show" identifier="IDSegue" id="HEb-99-8Kt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,7 +81,7 @@
                             <constraint firstItem="Y8A-et-TMQ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="30" id="BBO-qX-pCh"/>
                             <constraint firstItem="Y8A-et-TMQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Btc-at-dYP"/>
                             <constraint firstAttribute="bottomMargin" secondItem="8lx-rc-2tH" secondAttribute="bottom" id="JLI-bb-n7Z"/>
-                            <constraint firstItem="8Bf-Oc-GsU" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="QPx-y2-cPB"/>
+                            <constraint firstItem="8Bf-Oc-GsU" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="86" id="QPx-y2-cPB"/>
                             <constraint firstItem="8lx-rc-2tH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dKo-F2-5Et"/>
                             <constraint firstItem="8Bf-Oc-GsU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nRl-Hl-cAw"/>
                         </constraints>
@@ -523,7 +533,7 @@
                                             <constraint firstAttribute="width" constant="200" id="fLu-WJ-0xX"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identification process finished!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-3W-XfF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identification finished!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-3W-XfF">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
