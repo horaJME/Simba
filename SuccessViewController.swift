@@ -11,13 +11,11 @@ import UIKit
 class SuccessViewController: UIViewController {
     
     var success: String?
-    
-    @IBOutlet weak var SuccessLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SuccessLabel.text! = success!
+        print(success)
         
         // Do any additional setup after loading the view.
     }

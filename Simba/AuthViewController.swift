@@ -143,6 +143,8 @@ class AuthViewController: UIViewController {
         }
     }
     
+    //Error evaluation function
+    
     func errorMessageForLAErrorCode(errorCode: Int) -> String {
         var message = ""
         

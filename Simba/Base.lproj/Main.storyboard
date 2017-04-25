@@ -434,7 +434,13 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GWy-4b-D8v"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="NuS-fc-HTO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-nw-06l">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="S2G-7h-49J"/>
+                                    <constraint firstAttribute="height" constant="250" id="wSa-xi-Gz8"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-Jb-89I">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="QZL-HA-Zxj">
                                         <constraints>
@@ -442,16 +448,22 @@
                                             <constraint firstAttribute="height" constant="102" id="ZEp-Rw-85x"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJz-Ah-7NW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication successful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-Nd-LEq">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touchIDSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="5hv-Og-pSb">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="T8o-pc-mlq"/>
+                                            <constraint firstAttribute="height" constant="136" id="n89-BR-AA6"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-JG-PCH">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Home">
+                                        <state key="normal" title="Log out">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -462,34 +474,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-nw-06l">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="S2G-7h-49J"/>
-                                    <constraint firstAttribute="height" constant="250" id="wSa-xi-Gz8"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dE9-nw-06l" firstAttribute="centerX" secondItem="2eD-IU-Owp" secondAttribute="centerX" id="2zX-iX-TPq"/>
                             <constraint firstAttribute="bottom" secondItem="GWy-4b-D8v" secondAttribute="bottom" id="CBL-4K-5dn"/>
-                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="NuS-fc-HTO" secondAttribute="centerX" id="Fcg-ai-WOt"/>
+                            <constraint firstItem="0Bq-Jb-89I" firstAttribute="top" secondItem="2Lo-QL-b3t" secondAttribute="bottom" constant="40" id="RZ7-64-neK"/>
+                            <constraint firstItem="0Bq-Jb-89I" firstAttribute="centerX" secondItem="dE9-nw-06l" secondAttribute="centerX" id="TGj-G4-PQO"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerY" secondItem="5Wa-G8-WhJ" secondAttribute="centerY" id="Vax-Ze-BUM"/>
-                            <constraint firstItem="NuS-fc-HTO" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="centerY" constant="-45" id="bd8-2A-zNY"/>
-                            <constraint firstItem="NuS-fc-HTO" firstAttribute="centerX" secondItem="2eD-IU-Owp" secondAttribute="centerX" id="cXZ-n5-Kvz"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="top" secondItem="2eD-IU-Owp" secondAttribute="top" id="fIe-Xa-Zlx"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="leading" secondItem="2eD-IU-Owp" secondAttribute="leading" id="oeH-8X-Ryu"/>
                             <constraint firstItem="dE9-nw-06l" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="bottom" constant="30" id="sPW-nI-WfO"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="5Wa-G8-WhJ" secondAttribute="centerX" id="uY7-Aj-JBg"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="SuccessLabel" destination="tJz-Ah-7NW" id="Ika-FO-y6t"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="885"/>
+            <point key="canvasLocation" x="189.59999999999999" y="884.70764617691157"/>
         </scene>
         <!--TouchID View Controller-->
         <scene sceneID="n6i-XU-PVH">
@@ -561,6 +563,7 @@
         <image name="background" width="667" height="621"/>
         <image name="detail" width="293" height="186"/>
         <image name="logo3" width="122" height="62"/>
+        <image name="touchIDSuccess" width="180" height="175"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yaw-Ec-KSE"/>
