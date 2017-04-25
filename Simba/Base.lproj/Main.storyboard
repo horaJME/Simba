@@ -215,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="250" id="z63-8X-NsE"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="CAM-XO-nuo">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CAM-XO-nuo">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-Sg-Csf">
                                         <constraints>
@@ -237,31 +237,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter PIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-mT-6ge">
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-p1-bch" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="aSW-Cy-h3w"/>
-                                            <constraint firstAttribute="width" constant="200" id="maR-WE-8b9"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U42-pl-EwQ">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Send">
+                                        <state key="normal" title="Use Touch ID">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -273,7 +253,7 @@
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Home">
+                                        <state key="normal" title="Return">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -295,20 +275,19 @@
                             <constraint firstItem="ePM-8v-aYR" firstAttribute="leading" secondItem="Cc7-nu-nG8" secondAttribute="leading" id="Kep-1m-UAV"/>
                             <constraint firstItem="ePM-8v-aYR" firstAttribute="centerY" secondItem="yKm-ez-Dkg" secondAttribute="centerY" id="p8l-95-dyP"/>
                             <constraint firstItem="ePM-8v-aYR" firstAttribute="centerX" secondItem="CAM-XO-nuo" secondAttribute="centerX" id="wuH-gQ-wL9"/>
-                            <constraint firstItem="CAM-XO-nuo" firstAttribute="bottom" secondItem="Cc7-nu-nG8" secondAttribute="centerY" constant="197" id="xna-ac-Sox"/>
+                            <constraint firstItem="CAM-XO-nuo" firstAttribute="bottom" secondItem="Cc7-nu-nG8" secondAttribute="centerY" constant="113" id="xna-ac-Sox"/>
                             <constraint firstItem="Qyr-UK-w6X" firstAttribute="centerX" secondItem="Cc7-nu-nG8" secondAttribute="centerX" id="zCn-SJ-lxZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="IDText" destination="pDo-RN-Mm6" id="Ffb-V9-h7g"/>
-                        <outlet property="PINText" destination="sDf-p1-bch" id="UBg-6L-dGB"/>
                         <segue destination="MtP-rC-9Iw" kind="show" identifier="SuccessSegue" id="Fky-4b-90j"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AuthHomeSegue" id="GJI-0b-i0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt4-ao-p7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="885"/>
+            <point key="canvasLocation" x="-650" y="885"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ewy-66-Tht">
@@ -472,7 +451,7 @@
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Back">
+                                        <state key="normal" title="Home">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -496,7 +475,7 @@
                             <constraint firstAttribute="bottom" secondItem="GWy-4b-D8v" secondAttribute="bottom" id="CBL-4K-5dn"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="NuS-fc-HTO" secondAttribute="centerX" id="Fcg-ai-WOt"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerY" secondItem="5Wa-G8-WhJ" secondAttribute="centerY" id="Vax-Ze-BUM"/>
-                            <constraint firstItem="NuS-fc-HTO" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="centerY" constant="10" id="bd8-2A-zNY"/>
+                            <constraint firstItem="NuS-fc-HTO" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="centerY" constant="-45" id="bd8-2A-zNY"/>
                             <constraint firstItem="NuS-fc-HTO" firstAttribute="centerX" secondItem="2eD-IU-Owp" secondAttribute="centerX" id="cXZ-n5-Kvz"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="top" secondItem="2eD-IU-Owp" secondAttribute="top" id="fIe-Xa-Zlx"/>
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="leading" secondItem="2eD-IU-Owp" secondAttribute="leading" id="oeH-8X-Ryu"/>
@@ -510,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="885"/>
+            <point key="canvasLocation" x="190" y="885"/>
         </scene>
         <!--TouchID View Controller-->
         <scene sceneID="n6i-XU-PVH">
@@ -584,6 +563,6 @@
         <image name="logo3" width="122" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1uF-t9-8hq"/>
+        <segue reference="yaw-Ec-KSE"/>
     </inferredMetricsTieBreakers>
 </document>

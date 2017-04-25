@@ -9,12 +9,11 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import LocalAuthentication
 
 class AuthViewController: UIViewController {
     
     var OTP: String?
-    
-    
 
     //Alamofire completion handler functions
     //PIN POSTING FUNCTIONS
@@ -51,7 +50,7 @@ class AuthViewController: UIViewController {
     }
 
 
-    @IBOutlet weak var PINText: UITextField!
+
     @IBOutlet weak var IDText: UITextField!
     
     @IBAction func Home(_ sender: AnyObject) {
@@ -62,18 +61,8 @@ class AuthViewController: UIViewController {
     
     @IBAction func SendPIN(_ sender: UIButton) {
         
-        // Read into OTP list file
-        // Check if user and PIN match
-        
-        let value = UserDefaults.standard.string(forKey: IDText.text!)
-        var file = JSON.init(parseJSON: value!)
-
-        let user = file["user"].stringValue
-        let counter = file["counter"].intValue
-        /////
-        
-        print(user)
-        print(counter)
+        let user: String
+        let counter: Int
         
         if (IDText.text?.isEmpty ?? true){
             
@@ -83,58 +72,112 @@ class AuthViewController: UIViewController {
             
             return
             
+        } else if let value = UserDefaults.standard.string(forKey: IDText.text!){
+        
+            // Read into OTP list file
+            var file = JSON.init(parseJSON: value)
+            user = file["user"].stringValue
+            counter = file["counter"].intValue
+            print(user)
+            print(counter)
+            
+            //Preparing call
+            OTP = file["OTPlist"][counter]["OTP"].string
+            let callURL = URL + "auth"
+            let parameters: Parameters = ["user": user, "OTP": OTP!]
+            print(parameters)
+            
+            //Touch ID check
+            
+            let authenticationContext = LAContext()
+            var error: NSError?
+            
+            if authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                authenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Touch the Touch ID sensor to authenticate.", reply: { (success: Bool, error: Error?) in
+                    //If successful reading fingerprint
+                    if success {
+                    
+                        Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+                            
+                            switch response.result{
+                            case .success(let value):
+                                let json = JSON(value)
+                                
+                                //SETTING NEW COUNTER FOR OTP
+                                file["counter"].intValue = (file["counter"].intValue + 1)%10
+                                UserDefaults.standard.set(file.rawString(), forKey: user)
+                                UserDefaults.standard.synchronize()
+                                print("JSON: \(json)")
+                                
+                                // Perform segue
+                                self.performSegue(withIdentifier: "SuccessSegue", sender: "Authentication successful")
+                                
+                            case .failure(let error):
+                                print(error)
+                                
+                            }
+                        }
+                        
+                    } else {
+                        //Evaluating type of error that occured
+                        if let evaluateError = error as? NSError {
+                            let message = self.errorMessageForLAErrorCode(errorCode: evaluateError.code)
+                            self.displayAlertMessage(userMessage: message)
+                        }
+                    }
+                    
+                })
+            } else {
+                self.displayAlertMessage(userMessage: "This device does not support Touch ID")
+                return
+            }
         }
-        else if (PINText.text?.isEmpty ?? true){
+        else {
             
-            // Empty form alert
+            // Wrong user alert
             
-            displayAlertMessage(userMessage: "Please enter PIN")
+            displayAlertMessage(userMessage: "No such user found, finish ID process first!")
             
             return
             
         }
-        else if(PINText.text != file["PIN"].stringValue){
+    }
+    
+    func errorMessageForLAErrorCode(errorCode: Int) -> String {
+        var message = ""
         
-            displayAlertMessage(userMessage: "No user with such ID and PIN combination!")
-        
+        switch errorCode {
+        case LAError.appCancel.rawValue:
+            message = "Authentication was cancelled by application"
+            
+        case LAError.authenticationFailed.rawValue:
+            message = "The user failed to provide valid credentials"
+            
+        case LAError.invalidContext.rawValue:
+            message = "The context is invalid"
+            
+        case LAError.passcodeNotSet.rawValue:
+            message = "Passcode is not set on the device"
+            
+        case LAError.systemCancel.rawValue:
+            message = "Authentication was cancelled by the system"
+            
+        case LAError.touchIDLockout.rawValue:
+            message = "Too many failed attempts."
+            
+        case LAError.touchIDNotAvailable.rawValue:
+            message = "TouchID is not available on the device"
+            
+        case LAError.userCancel.rawValue:
+            message = "The user did cancel"
+            
+        case LAError.userFallback.rawValue:
+            message = "The user chose to use the fallback"
+            
+        default:
+            message = "Did not find error code on LAError object"
         }
-        else {
-            
-            
-            OTP = file["OTPlist"][counter]["OTP"].string
-            
-            let callURL = URL + "auth"
-            
-            let parameters: Parameters = ["user": user, "OTP": OTP!]
-
-            print(parameters)
-            
-            
-            Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
-                
-                switch response.result{
-                case .success(let value):
-                    let json = JSON(value)
-                    
-                    //SETTING NEW COUNTER FOR OTP
-                    file["counter"].intValue = (file["counter"].intValue + 1)%10
-                    UserDefaults.standard.set(file.rawString(), forKey: user)
-                    UserDefaults.standard.synchronize()
-                    
-                    print("JSON: \(json)")
-                case .failure(let error):
-                    print(error)
-                    
-                }
-            }
-            
-            
-            // Perform segue
-            
-            performSegue(withIdentifier: "SuccessSegue", sender: "Authentication successful")
-            
-            
-        }
+        return message
     }
     
     func displayAlertMessage (userMessage: String) {

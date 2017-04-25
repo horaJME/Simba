@@ -11,6 +11,7 @@
 		42B329CA1E95057300490EAA /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B329BC1E95054800490EAA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42B32A1A1E9FA92D00490EAA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A0D1E9FA8F100490EAA /* SwiftyJSON.framework */; };
 		42B32A1B1E9FA92D00490EAA /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A0D1E9FA8F100490EAA /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		42B32A321EAF707100490EAA /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A311EAF707100490EAA /* LocalAuthentication.framework */; };
 		42C2DA231E269030001770CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA221E269030001770CF /* AppDelegate.swift */; };
 		42C2DA251E269030001770CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA241E269030001770CF /* ViewController.swift */; };
 		42C2DA281E269030001770CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA261E269030001770CF /* Main.storyboard */; };
@@ -184,6 +185,7 @@
 /* Begin PBXFileReference section */
 		42B329B01E95054700490EAA /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		42B32A011E9FA8F100490EAA /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		42B32A311EAF707100490EAA /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		42C2DA1F1E269030001770CF /* Simba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C2DA221E269030001770CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C2DA241E269030001770CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B32A321EAF707100490EAA /* LocalAuthentication.framework in Frameworks */,
 				42B32A1A1E9FA92D00490EAA /* SwiftyJSON.framework in Frameworks */,
 				42B329C91E95057300490EAA /* Alamofire.framework in Frameworks */,
 			);
@@ -261,6 +264,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		42B32A301EAF707100490EAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42B32A311EAF707100490EAA /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		42C2DA161E269030001770CF = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +283,7 @@
 				42C2DA361E269030001770CF /* SimbaTests */,
 				42C2DA411E269030001770CF /* SimbaUITests */,
 				42C2DA201E269030001770CF /* Products */,
+				42B32A301EAF707100490EAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
