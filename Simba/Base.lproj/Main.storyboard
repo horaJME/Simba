@@ -453,7 +453,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TouchID" translatesAutoresizingMaskIntoConstraints="NO" id="5hv-Og-pSb">
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TouchID" translatesAutoresizingMaskIntoConstraints="NO" id="5hv-Og-pSb">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="T8o-pc-mlq"/>
                                             <constraint firstAttribute="height" constant="136" id="n89-BR-AA6"/>
@@ -519,7 +519,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-GI-vx6">
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-GI-vx6">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="9v2-pJ-aSM"/>
                                             <constraint firstAttribute="height" constant="120" id="OJq-Ji-ysQ"/>
@@ -573,6 +573,6 @@
         <image name="logo3" width="122" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GJI-0b-i0J"/>
+        <segue reference="yaw-Ec-KSE"/>
     </inferredMetricsTieBreakers>
 </document>
