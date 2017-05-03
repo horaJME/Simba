@@ -215,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="250" id="z63-8X-NsE"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CAM-XO-nuo">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAM-XO-nuo">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-Sg-Csf">
                                         <constraints>
@@ -249,6 +249,23 @@
                                             <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="cuH-CI-Igp"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----- or -----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njH-S0-2ai">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0E-uh-RYC">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Use PIN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="UsePIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="dFZ-ss-YIG"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-Jq-dcP">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -275,7 +292,7 @@
                             <constraint firstItem="ePM-8v-aYR" firstAttribute="leading" secondItem="Cc7-nu-nG8" secondAttribute="leading" id="Kep-1m-UAV"/>
                             <constraint firstItem="ePM-8v-aYR" firstAttribute="centerY" secondItem="yKm-ez-Dkg" secondAttribute="centerY" id="p8l-95-dyP"/>
                             <constraint firstItem="ePM-8v-aYR" firstAttribute="centerX" secondItem="CAM-XO-nuo" secondAttribute="centerX" id="wuH-gQ-wL9"/>
-                            <constraint firstItem="CAM-XO-nuo" firstAttribute="bottom" secondItem="Cc7-nu-nG8" secondAttribute="centerY" constant="113" id="xna-ac-Sox"/>
+                            <constraint firstItem="CAM-XO-nuo" firstAttribute="bottom" secondItem="Cc7-nu-nG8" secondAttribute="centerY" constant="188" id="xna-ac-Sox"/>
                             <constraint firstItem="Qyr-UK-w6X" firstAttribute="centerX" secondItem="Cc7-nu-nG8" secondAttribute="centerX" id="zCn-SJ-lxZ"/>
                         </constraints>
                     </view>
@@ -283,11 +300,116 @@
                         <outlet property="IDText" destination="pDo-RN-Mm6" id="Ffb-V9-h7g"/>
                         <segue destination="MtP-rC-9Iw" kind="show" identifier="SuccessSegue" id="Fky-4b-90j"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="AuthHomeSegue" id="GJI-0b-i0J"/>
+                        <segue destination="F7v-jR-W8H" kind="show" identifier="UsePINSegue" id="Nhx-Kg-Ony"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt4-ao-p7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="885"/>
+            <point key="canvasLocation" x="289" y="896"/>
+        </scene>
+        <!--AuthPIN Controller-->
+        <scene sceneID="MU2-4D-bSw">
+            <objects>
+                <viewController id="F7v-jR-W8H" customClass="AuthPINController" customModule="Simba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ybx-Zv-LnH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qxv-19-iNn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOh-XB-vDg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="V88-Gr-zBj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MRQ-fo-oXZ"/>
+                                    <constraint firstAttribute="height" constant="102" id="O3E-gG-loE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="J8n-Qa-3WK"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="i73-TI-3H5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="szp-TE-weE"/>
+                                    <constraint firstAttribute="width" constant="400" id="tYa-ir-UY2"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="n3J-pW-sYT">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3" translatesAutoresizingMaskIntoConstraints="NO" id="hdC-gT-E8d">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="abg-om-AVa"/>
+                                            <constraint firstAttribute="height" constant="102" id="mZP-HT-Pmu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter PIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0L1-bO-NGL">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="z3h-lt-piU" customClass="AllowedCharsTextField" customModule="Simba" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5Ss-ZO-Pe5"/>
+                                            <constraint firstAttribute="width" constant="200" id="auV-qw-O6S"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="0123456789"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUf-7d-Gvz">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SendPIN:" destination="F7v-jR-W8H" eventType="touchUpInside" id="Lbg-qa-LXK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQf-U8-yyq">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Home:" destination="F7v-jR-W8H" eventType="touchUpInside" id="0ra-IO-ng4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J8n-Qa-3WK" firstAttribute="centerX" secondItem="V88-Gr-zBj" secondAttribute="centerX" id="ChX-dn-Xg9"/>
+                            <constraint firstItem="i73-TI-3H5" firstAttribute="centerX" secondItem="SOh-XB-vDg" secondAttribute="centerX" id="S2W-xw-T5e"/>
+                            <constraint firstItem="J8n-Qa-3WK" firstAttribute="centerY" secondItem="V88-Gr-zBj" secondAttribute="centerY" id="UEQ-Bu-1vS"/>
+                            <constraint firstItem="n3J-pW-sYT" firstAttribute="centerX" secondItem="SOh-XB-vDg" secondAttribute="centerX" id="cHk-KO-7FH"/>
+                            <constraint firstItem="n3J-pW-sYT" firstAttribute="bottom" secondItem="SOh-XB-vDg" secondAttribute="centerY" constant="113" id="gXy-RA-VHy"/>
+                            <constraint firstAttribute="bottom" secondItem="J8n-Qa-3WK" secondAttribute="bottom" id="p2t-ZU-48N"/>
+                            <constraint firstItem="J8n-Qa-3WK" firstAttribute="centerX" secondItem="n3J-pW-sYT" secondAttribute="centerX" id="qDK-YO-lo4"/>
+                            <constraint firstItem="i73-TI-3H5" firstAttribute="bottom" secondItem="SOh-XB-vDg" secondAttribute="bottom" constant="30" id="u85-jh-zvL"/>
+                            <constraint firstItem="J8n-Qa-3WK" firstAttribute="top" secondItem="SOh-XB-vDg" secondAttribute="top" id="uoU-8T-msu"/>
+                            <constraint firstItem="J8n-Qa-3WK" firstAttribute="leading" secondItem="SOh-XB-vDg" secondAttribute="leading" id="x8W-f8-40V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PINText" destination="z3h-lt-piU" id="9dw-a6-OQk"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="PINHomeSegue" id="wiA-Df-2GF"/>
+                        <segue destination="MtP-rC-9Iw" kind="show" identifier="PINAuthSegue" id="jdQ-Xe-S6j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXD-JU-28Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="1251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ewy-66-Tht">
@@ -491,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908" y="885"/>
+            <point key="canvasLocation" x="1943" y="896"/>
         </scene>
         <!--TouchID View Controller-->
         <scene sceneID="n6i-XU-PVH">
@@ -574,5 +696,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yaw-Ec-KSE"/>
+        <segue reference="jdQ-Xe-S6j"/>
     </inferredMetricsTieBreakers>
 </document>

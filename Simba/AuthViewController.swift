@@ -17,7 +17,7 @@ class AuthViewController: UIViewController {
 
     //Alamofire completion handler functions
     //PIN POSTING FUNCTIONS
-    
+    /*
     func Auth(completionHandler: @escaping (String, Error?) -> ()){
         let otp = OTP
         let User = IDText.text!
@@ -48,7 +48,7 @@ class AuthViewController: UIViewController {
         }
         
     }
-
+    */
 
 
     @IBOutlet weak var IDText: UITextField!
@@ -58,6 +58,24 @@ class AuthViewController: UIViewController {
         performSegue(withIdentifier: "AuthHomeSegue", sender: self)
         
     }
+    
+    @IBAction func UsePIN(_ sender: AnyObject) {
+        
+        if (IDText.text?.isEmpty ?? true){
+            
+            // Empty form alert
+            
+            displayAlertMessage(userMessage: "Please enter ID")
+            
+            return
+            
+        } else{
+            
+        performSegue(withIdentifier: "UsePINSegue", sender: IDText.text!)
+        
+        }
+    }
+    
     
     @IBAction func SendPIN(_ sender: UIButton) {
         
@@ -209,7 +227,11 @@ class AuthViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SuccessSegue") {
             let destination = segue.destination as! SuccessViewController
-            destination.success = sender as! String?
+            destination.sent = sender as! String?
+        }
+        if (segue.identifier == "UsePINSegue") {
+            let destination = segue.destination as! AuthPINController
+            destination.sent = sender as! String?
         }
     }
     

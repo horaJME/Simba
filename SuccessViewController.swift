@@ -10,12 +10,12 @@ import UIKit
 
 class SuccessViewController: UIViewController {
     
-    var success: String?
+    var sent: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(success)
+        print(sent)
         
         // Do any additional setup after loading the view.
     }
