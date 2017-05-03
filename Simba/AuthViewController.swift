@@ -33,9 +33,16 @@ class AuthViewController: UIViewController {
             
             return
             
-        } else{
+        } else if UserDefaults.standard.string(forKey: IDText.text!) != nil{
             
-        performSegue(withIdentifier: "UsePINSegue", sender: IDText.text!)
+            performSegue(withIdentifier: "UsePINSegue", sender: IDText.text!)
+        
+        } else{
+            // Wrong user alert
+            
+            displayAlertMessage(userMessage: "No such user found, finish ID process first!")
+            
+            return
         
         }
     }
