@@ -54,13 +54,16 @@ class AuthPINController: UIViewController {
                     switch response.result{
                     case .success(let value):
                         let json = JSON(value)
+                        print("JSON: \(json)")
+                        
+                        if (json["status"].stringValue == "Authentication successful"){
                         
                         //SETTING NEW COUNTER FOR OTP
                         file["counter"].intValue = (file["counter"].intValue + 1)%10
                         UserDefaults.standard.set(file.rawString(), forKey: user)
                         UserDefaults.standard.synchronize()
-                        print("JSON: \(json)")
-                        
+                       
+                        }
                         // Perform segue
                         self.performSegue(withIdentifier: "PINAuthSegue", sender: json["status"].stringValue)
                         
@@ -73,7 +76,7 @@ class AuthPINController: UIViewController {
             }
             else {
             
-            //Preparing call
+            //Preparing call with wrong PIN
             //Generating fake OTP
                 
                 OTP = file["OTPlist"][counter]["OTP"].string
@@ -88,13 +91,16 @@ class AuthPINController: UIViewController {
                     switch response.result{
                     case .success(let value):
                         let json = JSON(value)
-                        
-                        //SETTING NEW COUNTER FOR OTP
-                        file["counter"].intValue = (file["counter"].intValue + 1)%10
-                        UserDefaults.standard.set(file.rawString(), forKey: user)
-                        UserDefaults.standard.synchronize()
                         print("JSON: \(json)")
                         
+                        if (json["status"].stringValue == "Authentication successful"){
+                            
+                            //SETTING NEW COUNTER FOR OTP
+                            file["counter"].intValue = (file["counter"].intValue + 1)%10
+                            UserDefaults.standard.set(file.rawString(), forKey: user)
+                            UserDefaults.standard.synchronize()
+                
+                        }
                         // Perform segue
                         self.performSegue(withIdentifier: "PINAuthSegue", sender: json["status"].stringValue)
                         
@@ -119,9 +125,6 @@ class AuthPINController: UIViewController {
             return
             
         }
-        
-        
-        performSegue(withIdentifier: "PINAuthSegue", sender: self)
         
     }
     @IBAction func Home(_ sender: AnyObject) {
@@ -151,6 +154,13 @@ class AuthPINController: UIViewController {
         
         self.present(myAlert, animated: true, completion: nil)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "PINAuthSegue") {
+            let destination = segue.destination as! SuccessViewController
+            destination.sent = sender as! String?
+        }
     }
     /*
     // MARK: - Navigation

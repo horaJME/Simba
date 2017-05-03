@@ -613,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="896"/>
+            <point key="canvasLocation" x="1921" y="922"/>
         </scene>
         <!--TouchID View Controller-->
         <scene sceneID="n6i-XU-PVH">
