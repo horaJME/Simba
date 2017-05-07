@@ -610,6 +610,10 @@
                             <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="5Wa-G8-WhJ" secondAttribute="centerX" id="uY7-Aj-JBg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AuthImage" destination="5hv-Og-pSb" id="SoC-eT-HuY"/>
+                        <outlet property="AuthResult" destination="ak3-Nd-LEq" id="2Jf-9E-6Ar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

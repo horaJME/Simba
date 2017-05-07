@@ -11,11 +11,24 @@ import UIKit
 class SuccessViewController: UIViewController {
     
     var sent: String?
+    
+    @IBOutlet weak var AuthResult: UILabel!
+    @IBOutlet weak var AuthImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(sent)
+        if (sent!=="Authentication successful") {
+        
+            AuthResult.text = "Authentication successful!"
+            AuthImage.image = UIImage(named: "TouchID")
+            
+        } else {
+            
+            AuthResult.text = "Authentication failed!"
+            AuthImage.image = UIImage(named: "TouchID2")
+        
+        }
         
         // Do any additional setup after loading the view.
     }
