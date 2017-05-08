@@ -32,6 +32,8 @@ class TouchIDViewController: UIViewController {
         file["TouchID"].intValue = 1
         UserDefaults.standard.set(file.rawString(), forKey:user!)
         UserDefaults.standard.synchronize()
+        // Perform segue
+        self.performSegue(withIdentifier: "FinishSegue", sender: self)
         
     }
     
