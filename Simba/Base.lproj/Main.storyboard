@@ -640,22 +640,33 @@
                                             <constraint firstAttribute="width" constant="200" id="fLu-WJ-0xX"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identification finished!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-3W-XfF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consider configuring TouchID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZX-ff-Ws2">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-GI-vx6">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="9v2-pJ-aSM"/>
-                                            <constraint firstAttribute="height" constant="120" id="OJq-Ji-ysQ"/>
-                                        </constraints>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to finish ID process:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-3W-XfF">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93f-cW-Hdi">
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="Configure TouchID">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ConfigureTouchID:" destination="4fG-zv-mRD" eventType="touchUpInside" id="eHa-Cs-bfs"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUs-Xt-bZ1">
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Home">
+                                        <state key="normal" title="Finish without TouchID">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -672,15 +683,24 @@
                                     <constraint firstAttribute="height" constant="250" id="rWU-mQ-NcV"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-GI-vx6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="9v2-pJ-aSM"/>
+                                    <constraint firstAttribute="height" constant="180" id="OJq-Ji-ysQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dlY-sD-QGY" firstAttribute="bottom" secondItem="DgC-Yc-YIu" secondAttribute="centerY" constant="100" id="0ro-QH-mu7"/>
+                            <constraint firstItem="dlY-sD-QGY" firstAttribute="bottom" secondItem="DgC-Yc-YIu" secondAttribute="centerY" constant="85" id="0ro-QH-mu7"/>
                             <constraint firstItem="847-b7-igR" firstAttribute="centerX" secondItem="DgC-Yc-YIu" secondAttribute="centerX" id="1Cc-R8-a1C"/>
                             <constraint firstItem="847-b7-igR" firstAttribute="bottom" secondItem="DgC-Yc-YIu" secondAttribute="bottom" constant="30" id="Aga-oi-VQ5"/>
+                            <constraint firstItem="dlY-sD-QGY" firstAttribute="leading" secondItem="DgC-Yc-YIu" secondAttribute="leadingMargin" constant="3" id="Fjj-UQ-KVG"/>
                             <constraint firstAttribute="trailing" secondItem="sGh-Bh-rbo" secondAttribute="trailing" id="NYp-95-CLv"/>
+                            <constraint firstItem="dlY-sD-QGY" firstAttribute="centerX" secondItem="G0U-GI-vx6" secondAttribute="centerX" id="QsV-9B-AHs"/>
                             <constraint firstAttribute="bottomMargin" secondItem="sGh-Bh-rbo" secondAttribute="bottom" id="iPZ-5g-6zz"/>
                             <constraint firstItem="dlY-sD-QGY" firstAttribute="centerX" secondItem="DgC-Yc-YIu" secondAttribute="centerX" id="jqj-aM-daS"/>
+                            <constraint firstItem="G0U-GI-vx6" firstAttribute="centerY" secondItem="sGh-Bh-rbo" secondAttribute="centerY" constant="203.5" id="qnu-Ue-G0a"/>
                             <constraint firstItem="sGh-Bh-rbo" firstAttribute="leading" secondItem="DgC-Yc-YIu" secondAttribute="leading" id="tZH-lb-zah"/>
                             <constraint firstItem="sGh-Bh-rbo" firstAttribute="top" secondItem="DgC-Yc-YIu" secondAttribute="topMargin" id="x5O-ap-NPS"/>
                         </constraints>
@@ -699,7 +719,7 @@
         <image name="logo3" width="122" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yaw-Ec-KSE"/>
+        <segue reference="1uF-t9-8hq"/>
         <segue reference="jdQ-Xe-S6j"/>
     </inferredMetricsTieBreakers>
 </document>

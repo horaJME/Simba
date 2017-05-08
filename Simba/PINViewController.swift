@@ -113,9 +113,7 @@ class PINViewController: UIViewController {
                 
                 if (responseObject == "PIN Added") {
                     
-                    // Perform segue
                     
-                    self.performSegue(withIdentifier: "PINSegue", sender: self)
                     
                     let callURL = URL + "OTP/" + self.user!
                     
@@ -127,6 +125,8 @@ class PINViewController: UIViewController {
                             UserDefaults.standard.set(json.rawString(), forKey: self.user!)
                             UserDefaults.standard.synchronize()
                             print("JSON: \(json)")
+                            // Perform segue
+                            self.performSegue(withIdentifier: "PINSegue", sender: self.user!)
                             
                         case .failure(let error):
                             print(error)
@@ -170,6 +170,12 @@ class PINViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "PINSegue") {
+            let destination = segue.destination as! TouchIDViewController
+            destination.user = sender as! String?
+        }
+    }
 
     /*
     // MARK: - Navigation

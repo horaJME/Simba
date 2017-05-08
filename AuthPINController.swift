@@ -48,7 +48,7 @@ class AuthPINController: UIViewController {
                 let callURL = URL + "auth"
                 let parameters: Parameters = ["user": user, "OTP": OTP!]
                 print(parameters)
-                
+                print(file.rawString())
                 Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
                     
                     switch response.result{

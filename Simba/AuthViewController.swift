@@ -61,7 +61,7 @@ class AuthViewController: UIViewController {
             
             return
             
-        } else if let value = UserDefaults.standard.string(forKey: IDText.text!){
+        }else if let value = UserDefaults.standard.string(forKey: IDText.text!){
         
             // Read into OTP list file
             var file = JSON.init(parseJSON: value)
@@ -70,6 +70,14 @@ class AuthViewController: UIViewController {
             print(user)
             print(counter)
             
+            //Touch ID not enabled with ID
+            if (file["TouchID"]==0){
+            
+                displayAlertMessage(userMessage: "TouchID was not enabled during identification!")
+                return
+            
+            }
+
             //Preparing call
             OTP = file["OTPlist"][counter]["OTP"].string
             let callURL = URL + "auth"

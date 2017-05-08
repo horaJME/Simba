@@ -7,16 +7,36 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class TouchIDViewController: UIViewController {
 
+    var user: String?
+
     @IBAction func FinishButton(_ sender: UIButton) {
+        
+        //Setting label in saved info not to use TouchID
+        let value = UserDefaults.standard.string(forKey: user!)
+        var file = JSON.init(parseJSON: value!)
+        file["TouchID"].intValue = 0
+        UserDefaults.standard.set(file.rawString(), forKey:user!)
+        UserDefaults.standard.synchronize()
+        
     }
     
+    @IBAction func ConfigureTouchID(_ sender: AnyObject) {
+        
+        //Setting label in saved info not to use TouchID
+        let value = UserDefaults.standard.string(forKey: user!)
+        var file = JSON.init(parseJSON: value!)
+        file["TouchID"].intValue = 1
+        UserDefaults.standard.set(file.rawString(), forKey:user!)
+        UserDefaults.standard.synchronize()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
