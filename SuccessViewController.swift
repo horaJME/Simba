@@ -14,6 +14,20 @@ class SuccessViewController: UIViewController {
     
     @IBOutlet weak var AuthResult: UILabel!
     @IBOutlet weak var AuthImage: UIImageView!
+    @IBOutlet weak var ReactButton: UIButton!
+    @IBAction func ReactionButton(_ sender: AnyObject) {
+        
+        if (sent!=="Authentication successful") {
+            
+            performSegue(withIdentifier: "LogOutSegue", sender: self)
+            
+        } else {
+            
+            performSegue(withIdentifier: "TryAgainSegue", sender: self)
+            
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +41,7 @@ class SuccessViewController: UIViewController {
             
             AuthResult.text = "Authentication failed!"
             AuthImage.image = UIImage(named: "TouchID2")
+            ReactButton.setTitle("Try again", for: .normal)
         
         }
         

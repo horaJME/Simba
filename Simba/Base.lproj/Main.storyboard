@@ -590,8 +590,8 @@
                                             <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="ReactionButton:" destination="MtP-rC-9Iw" eventType="touchUpInside" id="Leq-Tt-QVA"/>
                                             <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="Sa0-4i-b4W"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="yaw-Ec-KSE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -613,6 +613,9 @@
                     <connections>
                         <outlet property="AuthImage" destination="5hv-Og-pSb" id="SoC-eT-HuY"/>
                         <outlet property="AuthResult" destination="ak3-Nd-LEq" id="2Jf-9E-6Ar"/>
+                        <outlet property="ReactButton" destination="ih2-JG-PCH" id="8RQ-Z5-z24"/>
+                        <segue destination="DvQ-G2-zMV" kind="show" identifier="TryAgainSegue" id="m3b-ef-z2L"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogOutSegue" id="pIc-Kj-Flu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -719,7 +722,8 @@
         <image name="logo3" width="122" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1uF-t9-8hq"/>
+        <segue reference="pIc-Kj-Flu"/>
         <segue reference="jdQ-Xe-S6j"/>
+        <segue reference="m3b-ef-z2L"/>
     </inferredMetricsTieBreakers>
 </document>

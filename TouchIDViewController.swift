@@ -26,7 +26,7 @@ class TouchIDViewController: UIViewController {
     
     @IBAction func ConfigureTouchID(_ sender: AnyObject) {
         
-        //Setting label in saved info not to use TouchID
+        //Setting label in saved info to use TouchID
         let value = UserDefaults.standard.string(forKey: user!)
         var file = JSON.init(parseJSON: value!)
         file["TouchID"].intValue = 1
