@@ -248,6 +248,7 @@
 		42B32A311EAF707100490EAA /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		42B32A371EBA4E2900490EAA /* AuthPINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthPINController.swift; path = ../AuthPINController.swift; sourceTree = "<group>"; };
 		42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Locksmith.xcodeproj; path = Locksmith/Locksmith.xcodeproj; sourceTree = "<group>"; };
+		42B32A631ECA198300490EAA /* Simba.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simba.entitlements; sourceTree = "<group>"; };
 		42C2DA1F1E269030001770CF /* Simba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C2DA221E269030001770CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C2DA241E269030001770CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -378,6 +379,7 @@
 		42C2DA211E269030001770CF /* Simba */ = {
 			isa = PBXGroup;
 			children = (
+				42B32A631ECA198300490EAA /* Simba.entitlements */,
 				42B32A371EBA4E2900490EAA /* AuthPINController.swift */,
 				42F017C21E2B914000513B6A /* TouchIDViewController.swift */,
 				42F017C01E27F8B500513B6A /* SuccessViewController.swift */,
@@ -485,7 +487,13 @@
 				TargetAttributes = {
 					42C2DA1E1E269030001770CF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CX9VLRV49V;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					42C2DA321E269030001770CF = {
 						CreatedOnToolsVersion = 8.0;
@@ -892,6 +900,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Simba/Simba.entitlements;
+				DEVELOPMENT_TEAM = CX9VLRV49V;
 				INFOPLIST_FILE = Simba/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -906,6 +916,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Simba/Simba.entitlements;
+				DEVELOPMENT_TEAM = CX9VLRV49V;
 				INFOPLIST_FILE = Simba/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

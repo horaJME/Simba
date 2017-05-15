@@ -31,8 +31,19 @@ class TouchIDViewController: UIViewController {
         let value = UserDefaults.standard.string(forKey: user!)
         var file = JSON.init(parseJSON: value!)
         file["TouchID"].intValue = 1
+        let PIN = file["PIN"].stringValue
         UserDefaults.standard.set(file.rawString(), forKey:user!)
         UserDefaults.standard.synchronize()
+        
+        //Saving PIN into keychain
+        do {
+            try Locksmith.saveData(data: ["PIN": PIN], forUserAccount: user!)
+        }
+        catch {
+            //Could not save PIN to keychain
+            print("Failed saving PIN to keychain!")
+        }
+        
         // Perform segue
         self.performSegue(withIdentifier: "FinishSegue", sender: self)
         

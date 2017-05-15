@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import LocalAuthentication
+import Locksmith
 
 class AuthViewController: UIViewController {
     
@@ -96,6 +97,8 @@ class AuthViewController: UIViewController {
                     
                         
                         //Unlocking PIN from keychain
+                        let keychainDict = Locksmith.loadDataForUserAccount(userAccount: user)
+                        print(keychainDict?["PIN"])
                         //Checking PIN
                         
                         Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
