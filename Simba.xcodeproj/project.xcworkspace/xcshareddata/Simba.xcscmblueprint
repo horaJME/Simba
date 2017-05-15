@@ -4,20 +4,27 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
     "BFA53FE5FCDE788A698977A91A6FE735090A4DC5" : 9223372036854775807,
+    "4E8FE33026C73951A712CD33348204351A71B278" : 9223372036854775807,
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
     "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "596B9B9E-2214-43D7-8FE6-2AA5CA584220",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "Simba\/SwiftyJSON\/",
     "BFA53FE5FCDE788A698977A91A6FE735090A4DC5" : "Simba\/",
+    "4E8FE33026C73951A712CD33348204351A71B278" : "Simba\/Locksmith\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "Simba\/SwiftyJSON\/",
     "67620B5EFA902936DF04070AF595B76AB0333747" : "Simba\/Alamofire\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Simba",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Simba.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/matthewpalmer\/Locksmith",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4E8FE33026C73951A712CD33348204351A71B278"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

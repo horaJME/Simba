@@ -13,6 +13,8 @@
 		42B32A1B1E9FA92D00490EAA /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A0D1E9FA8F100490EAA /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42B32A321EAF707100490EAA /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A311EAF707100490EAA /* LocalAuthentication.framework */; };
 		42B32A381EBA4E2900490EAA /* AuthPINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B32A371EBA4E2900490EAA /* AuthPINController.swift */; };
+		42B32A5F1ECA106F00490EAA /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A521ECA0FF700490EAA /* Locksmith.framework */; };
+		42B32A601ECA106F00490EAA /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A521ECA0FF700490EAA /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42C2DA231E269030001770CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA221E269030001770CF /* AppDelegate.swift */; };
 		42C2DA251E269030001770CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2DA241E269030001770CF /* ViewController.swift */; };
 		42C2DA281E269030001770CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2DA261E269030001770CF /* Main.storyboard */; };
@@ -142,6 +144,62 @@
 			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
 			remoteInfo = "SwiftyJSON iOS";
 		};
+		42B32A511ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C591BA385AA004191AF;
+			remoteInfo = "Locksmith iOS";
+		};
+		42B32A531ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C621BA385AB004191AF;
+			remoteInfo = "Locksmith iOS Tests";
+		};
+		42B32A551ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C751BA385F6004191AF;
+			remoteInfo = "Locksmith OS X";
+		};
+		42B32A571ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C7E1BA385F6004191AF;
+			remoteInfo = "Locksmith OS X Tests";
+		};
+		42B32A591ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25CA71BA39C9F004191AF;
+			remoteInfo = "Locksmith watchOS";
+		};
+		42B32A5B1ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBD0C9491C1866BE00291F2A;
+			remoteInfo = "Locksmith tvOS";
+		};
+		42B32A5D1ECA0FF700490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E3DD3B341D84356500A59312;
+			remoteInfo = "Test Host";
+		};
+		42B32A611ECA106F00490EAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EC25C581BA385AA004191AF;
+			remoteInfo = "Locksmith iOS";
+		};
 		42C2DA341E269030001770CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42C2DA171E269030001770CF /* Project object */;
@@ -165,6 +223,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				42B32A601ECA106F00490EAA /* Locksmith.framework in Embed Frameworks */,
 				42B32A1B1E9FA92D00490EAA /* SwiftyJSON.framework in Embed Frameworks */,
 				42B329CA1E95057300490EAA /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -188,6 +247,7 @@
 		42B32A011E9FA8F100490EAA /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		42B32A311EAF707100490EAA /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		42B32A371EBA4E2900490EAA /* AuthPINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthPINController.swift; path = ../AuthPINController.swift; sourceTree = "<group>"; };
+		42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Locksmith.xcodeproj; path = Locksmith/Locksmith.xcodeproj; sourceTree = "<group>"; };
 		42C2DA1F1E269030001770CF /* Simba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C2DA221E269030001770CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C2DA241E269030001770CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B32A321EAF707100490EAA /* LocalAuthentication.framework in Frameworks */,
+				42B32A5F1ECA106F00490EAA /* Locksmith.framework in Frameworks */,
 				42B32A1A1E9FA92D00490EAA /* SwiftyJSON.framework in Frameworks */,
 				42B329C91E95057300490EAA /* Alamofire.framework in Frameworks */,
 			);
@@ -274,12 +335,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		42B32A481ECA0FF700490EAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B32A521ECA0FF700490EAA /* Locksmith.framework */,
+				42B32A541ECA0FF700490EAA /* Locksmith iOS Tests.xctest */,
+				42B32A561ECA0FF700490EAA /* Locksmith.framework */,
+				42B32A581ECA0FF700490EAA /* Locksmith OS X Tests.xctest */,
+				42B32A5A1ECA0FF700490EAA /* Locksmith.framework */,
+				42B32A5C1ECA0FF700490EAA /* Locksmith.framework */,
+				42B32A5E1ECA0FF700490EAA /* Test Host.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		42C2DA161E269030001770CF = {
 			isa = PBXGroup;
 			children = (
-				42B329B01E95054700490EAA /* Alamofire.xcodeproj */,
 				42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */,
 				42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */,
+				42B329B01E95054700490EAA /* Alamofire.xcodeproj */,
+				42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */,
 				42B32A011E9FA8F100490EAA /* SwiftyJSON.xcodeproj */,
 				42C2DA211E269030001770CF /* Simba */,
 				42C2DA361E269030001770CF /* SimbaTests */,
@@ -354,6 +430,7 @@
 			dependencies = (
 				42B329CC1E95057300490EAA /* PBXTargetDependency */,
 				42B32A1D1E9FA92D00490EAA /* PBXTargetDependency */,
+				42B32A621ECA106F00490EAA /* PBXTargetDependency */,
 			);
 			name = Simba;
 			productName = Simba;
@@ -437,6 +514,10 @@
 				{
 					ProductGroup = 42B329B11E95054700490EAA /* Products */;
 					ProjectRef = 42B329B01E95054700490EAA /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 42B32A481ECA0FF700490EAA /* Products */;
+					ProjectRef = 42B32A471ECA0FF700490EAA /* Locksmith.xcodeproj */;
 				},
 				{
 					ProductGroup = 42B32A021E9FA8F100490EAA /* Products */;
@@ -551,6 +632,55 @@
 			remoteRef = 42B32A181E9FA8F100490EAA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		42B32A521ECA0FF700490EAA /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 42B32A511ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B32A541ECA0FF700490EAA /* Locksmith iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Locksmith iOS Tests.xctest";
+			remoteRef = 42B32A531ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B32A561ECA0FF700490EAA /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 42B32A551ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B32A581ECA0FF700490EAA /* Locksmith OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Locksmith OS X Tests.xctest";
+			remoteRef = 42B32A571ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B32A5A1ECA0FF700490EAA /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 42B32A591ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B32A5C1ECA0FF700490EAA /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 42B32A5B1ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B32A5E1ECA0FF700490EAA /* Test Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Test Host.app";
+			remoteRef = 42B32A5D1ECA0FF700490EAA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -626,6 +756,11 @@
 			isa = PBXTargetDependency;
 			name = "SwiftyJSON iOS";
 			targetProxy = 42B32A1C1E9FA92D00490EAA /* PBXContainerItemProxy */;
+		};
+		42B32A621ECA106F00490EAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Locksmith iOS";
+			targetProxy = 42B32A611ECA106F00490EAA /* PBXContainerItemProxy */;
 		};
 		42C2DA351E269030001770CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
