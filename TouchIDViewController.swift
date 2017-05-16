@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Locksmith
+import LocalAuthentication
 
 class TouchIDViewController: UIViewController {
 
@@ -30,22 +31,96 @@ class TouchIDViewController: UIViewController {
         //Setting label in saved info to use TouchID
         let value = UserDefaults.standard.string(forKey: user!)
         var file = JSON.init(parseJSON: value!)
-        file["TouchID"].intValue = 1
-        let PIN = file["PIN"].stringValue
-        UserDefaults.standard.set(file.rawString(), forKey:user!)
-        UserDefaults.standard.synchronize()
         
-        //Saving PIN into keychain
-        do {
-            try Locksmith.saveData(data: ["PIN": PIN], forUserAccount: user!)
-        }
-        catch {
-            //Could not save PIN to keychain
-            print("Failed saving PIN to keychain!")
+        //Touch ID setup
+        
+        let authenticationContext = LAContext()
+        var error: NSError?
+        
+        if authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            authenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Touch to setup Touch ID for authentication.", reply: { (success: Bool, error: Error?) in
+                //If successful reading fingerprint
+                if success {
+                    
+                    file["TouchID"].intValue = 1
+                    let PIN = file["PIN"].stringValue
+                    UserDefaults.standard.set(file.rawString(), forKey:self.user!)
+                    UserDefaults.standard.synchronize()
+                    
+                    //Saving PIN into keychain
+                    do {
+                        try Locksmith.saveData(data: ["PIN": PIN], forUserAccount: self.user!)
+                    }
+                    catch {
+                        //Could not save PIN to keychain
+                        print("Failed saving PIN to keychain!")
+                    }
+                    
+                    // Perform segue
+                    self.performSegue(withIdentifier: "FinishSegue", sender: self)
+                    
+                } else {
+                    //Evaluating type of error that occured
+                    if let evaluateError = error as? NSError {
+                        let message = self.errorMessageForLAErrorCode(errorCode: evaluateError.code)
+                        self.displayAlertMessage(userMessage: message)
+                    }
+                }
+                
+            })
+        } else {
+            self.displayAlertMessage(userMessage: "This device does not support Touch ID")
+            return
         }
         
-        // Perform segue
-        self.performSegue(withIdentifier: "FinishSegue", sender: self)
+    }
+    
+    func errorMessageForLAErrorCode(errorCode: Int) -> String {
+        var message = ""
+        
+        switch errorCode {
+        case LAError.appCancel.rawValue:
+            message = "Authentication was cancelled by application"
+            
+        case LAError.authenticationFailed.rawValue:
+            message = "The user failed to provide valid credentials"
+            
+        case LAError.invalidContext.rawValue:
+            message = "The context is invalid"
+            
+        case LAError.passcodeNotSet.rawValue:
+            message = "Passcode is not set on the device"
+            
+        case LAError.systemCancel.rawValue:
+            message = "Authentication was cancelled by the system"
+            
+        case LAError.touchIDLockout.rawValue:
+            message = "Too many failed attempts."
+            
+        case LAError.touchIDNotAvailable.rawValue:
+            message = "TouchID is not available on the device"
+            
+        case LAError.userCancel.rawValue:
+            message = "The user did cancel"
+            
+        case LAError.userFallback.rawValue:
+            message = "The user chose to use the fallback"
+            
+        default:
+            message = "Did not find error code on LAError object"
+        }
+        return message
+    }
+    
+    func displayAlertMessage (userMessage: String) {
+        
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
         
     }
     
@@ -60,6 +135,7 @@ class TouchIDViewController: UIViewController {
     }
     
 
+    
     /*
     // MARK: - Navigation
 

@@ -36,20 +36,28 @@ class AuthPINController: UIViewController {
             var file = JSON.init(parseJSON: value)
             user = file["user"].stringValue
             counter = file["counter"].intValue
+            OTP = file["OTPlist"][counter]["OTP"].string
+            
+            /*
             print(user)
             print(counter)
+            */
             
-            //Checking if PIN is correct
-            
-            if(PINText.text! == file["PIN"].stringValue){
-            
-                //Preparing call
-                OTP = file["OTPlist"][counter]["OTP"].string
-                let callURL = URL + "auth"
-                let parameters: Parameters = ["user": user, "OTP": OTP!]
-                print(parameters)
+            //Checking if PIN is incorrect
+            //Setting up fake OTP in that case
+            if(PINText.text! != file["PIN"].stringValue){
                 
-                Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+                //Setting up fake OTP
+                let FakeOTP = Int(OTP!)!+1
+                OTP = String(FakeOTP)
+            }
+            
+            //Preparing authentication call
+            let callURL = URL + "auth"
+            let parameters: Parameters = ["user": user, "OTP": OTP!]
+            print(parameters)
+                
+            Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
                     
                     switch response.result{
                     case .success(let value):
@@ -72,49 +80,6 @@ class AuthPINController: UIViewController {
                         
                     }
                 }
-
-            }
-            else {
-            
-            //Preparing call with wrong PIN
-            //Generating fake OTP
-                
-                OTP = file["OTPlist"][counter]["OTP"].string
-                let FakeOTP = Int(OTP!)!+1
-                OTP = String(FakeOTP)
-                let callURL = URL + "auth"
-                let parameters: Parameters = ["user": user, "OTP": OTP!]
-                print(parameters)
-                
-                Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
-                    
-                    switch response.result{
-                    case .success(let value):
-                        let json = JSON(value)
-                        print("JSON: \(json)")
-                        
-                        if (json["status"].stringValue == "Authentication successful"){
-                            
-                            //SETTING NEW COUNTER FOR OTP
-                            file["counter"].intValue = (file["counter"].intValue + 1)%10
-                            UserDefaults.standard.set(file.rawString(), forKey: user)
-                            UserDefaults.standard.synchronize()
-                
-                        }
-                        // Perform segue
-                        self.performSegue(withIdentifier: "PINAuthSegue", sender: json["status"].stringValue)
-                        
-                    case .failure(let error):
-                        print(error)
-                        
-                    }
-                }
-
-            
-            
-            }
-            
-            
         }
         else {
             

@@ -95,10 +95,14 @@ class AuthViewController: UIViewController {
                     //If successful reading fingerprint
                     if success {
                     
-                        
+                        let PIN = file["PIN"].stringValue
                         //Unlocking PIN from keychain
-                        let keychainDict = Locksmith.loadDataForUserAccount(userAccount: user)
-                        print(keychainDict?["PIN"])
+                        var keychainDict = Locksmith.loadDataForUserAccount(userAccount: user)
+                        if (String(describing: keychainDict!["PIN"]) != PIN)
+                        {
+                            let FakeOTP = Int(self.OTP!)!+1
+                            self.OTP = String(FakeOTP)
+                        }
                         //Checking PIN
                         
                         Alamofire.request(callURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
@@ -107,14 +111,17 @@ class AuthViewController: UIViewController {
                             case .success(let value):
                                 let json = JSON(value)
                                 
-                                //SETTING NEW COUNTER FOR OTP
-                                file["counter"].intValue = (file["counter"].intValue + 1)%10
-                                UserDefaults.standard.set(file.rawString(), forKey: user)
-                                UserDefaults.standard.synchronize()
-                                print("JSON: \(json)")
+                                if (json["status"].stringValue == "Authentication successful"){
+                                    
+                                    //SETTING NEW COUNTER FOR OTP
+                                    file["counter"].intValue = (file["counter"].intValue + 1)%10
+                                    UserDefaults.standard.set(file.rawString(), forKey: user)
+                                    UserDefaults.standard.synchronize()
+                                    
+                                }
                                 
                                 // Perform segue
-                                self.performSegue(withIdentifier: "SuccessSegue", sender: "Authentication successful")
+                                self.performSegue(withIdentifier: "SuccessSegue", sender: json["status"].stringValue)
                                 
                             case .failure(let error):
                                 print(error)
