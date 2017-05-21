@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-let URL = "http://192.168.5.10/slimapp/index.php/api/"
+let URL = "https://peaceful-caverns-83218.herokuapp.com/index.php/api/"
 
 class ViewController: UIViewController {
 

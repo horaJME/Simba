@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		428732D11ED1AC1500E5543B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428732D01ED1AC1500E5543B /* Default-568h@2x.png */; };
 		42B329C91E95057300490EAA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B329BC1E95054800490EAA /* Alamofire.framework */; };
 		42B329CA1E95057300490EAA /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42B329BC1E95054800490EAA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42B32A1A1E9FA92D00490EAA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B32A0D1E9FA8F100490EAA /* SwiftyJSON.framework */; };
@@ -243,6 +244,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		428732D01ED1AC1500E5543B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		42B329B01E95054700490EAA /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		42B32A011E9FA8F100490EAA /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		42B32A311EAF707100490EAA /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
@@ -353,6 +355,7 @@
 		42C2DA161E269030001770CF = {
 			isa = PBXGroup;
 			children = (
+				428732D01ED1AC1500E5543B /* Default-568h@2x.png */,
 				42F017C61E2D713F00513B6A /* MaxLengthTextField.swift */,
 				42F017C81E2D73BF00513B6A /* AllowedCharsTextField.swift */,
 				42B329B01E95054700490EAA /* Alamofire.xcodeproj */,
@@ -697,6 +700,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C2DA2D1E269030001770CF /* LaunchScreen.storyboard in Resources */,
+				428732D11ED1AC1500E5543B /* Default-568h@2x.png in Resources */,
 				42C2DA2A1E269030001770CF /* Assets.xcassets in Resources */,
 				42C2DA281E269030001770CF /* Main.storyboard in Resources */,
 			);
