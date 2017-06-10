@@ -57,7 +57,8 @@ class TouchIDViewController: UIViewController {
                     }
                     
                     // Perform segue
-                    self.performSegue(withIdentifier: "FinishSegue", sender: self)
+                    
+                    self.displayAlertMessageSegue(userMessage: "TouchID successfully set up")
                     
                 } else {
                     //Evaluating type of error that occured
@@ -124,6 +125,19 @@ class TouchIDViewController: UIViewController {
         
     }
     
+    func displayAlertMessageSegue (userMessage: String) {
+        
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: { action in self.performSegue(withIdentifier: "FinishSegue", sender: self)})
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+        
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -134,8 +148,7 @@ class TouchIDViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
+        
     /*
     // MARK: - Navigation
 
