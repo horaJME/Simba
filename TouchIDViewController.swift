@@ -133,6 +133,13 @@ class TouchIDViewController: UIViewController {
         
         myAlert.addAction(okAction)
         
+        let imageView = UIImageView(frame: CGRect(x:220,y:40,width:90,height:90))
+        
+        imageView.image = #imageLiteral(resourceName: "TouchID")
+        
+        myAlert.view.addSubview(imageView)
+        
+        
         self.present(myAlert, animated: true, completion: nil)
         
     }
