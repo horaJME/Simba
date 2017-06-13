@@ -71,9 +71,13 @@ class AuthPINController: UIViewController {
                         UserDefaults.standard.set(file.rawString(), forKey: user)
                         UserDefaults.standard.synchronize()
                        
+                        self.displayAlertMessageSegue(userMessage: "PIN Authentication successful!")
+                            
+                        } else {
+                            
+                            self.displayAlertMessageSegue(userMessage: "PIN Authentication not successful!")
+   
                         }
-                        // Perform segue
-                        self.performSegue(withIdentifier: "PINAuthSegue", sender: json["status"].stringValue)
                         
                     case .failure(let error):
                         print(error)
@@ -121,12 +125,37 @@ class AuthPINController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "PINAuthSegue") {
-            let destination = segue.destination as! SuccessViewController
-            destination.sent = sender as! String?
+    func displayAlertMessageSegue (userMessage: String) {
+        
+        let imageView = UIImageView(frame: CGRect(x:230,y:42,width:80,height:80))
+        
+        let myAlert = UIAlertController(title: "Authentication", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        var segue = ""
+        
+        if userMessage == "PIN Authentication successful!"{
+            
+            imageView.image = #imageLiteral(resourceName: "TouchID")
+            
+            segue = "PINAuthSegue"
+            
+        } else {
+            
+            imageView.image = #imageLiteral(resourceName: "TouchID2")
+            
+            segue = "TryAgainSegue"
+            
         }
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: { action in self.performSegue(withIdentifier: segue, sender: self)})
+        
+        myAlert.addAction(okAction)
+        
+        myAlert.view.addSubview(imageView)
+        
+        self.present(myAlert, animated: true, completion: nil)
+        
     }
+    
     /*
     // MARK: - Navigation
 

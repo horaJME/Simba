@@ -58,7 +58,7 @@ class TouchIDViewController: UIViewController {
                     
                     // Perform segue
                     
-                    self.displayAlertMessageSegue(userMessage: "TouchID successfully set up")
+                    self.displayAlertMessageSegue(userMessage: "TouchID setup successful")
                     
                 } else {
                     //Evaluating type of error that occured
@@ -127,7 +127,7 @@ class TouchIDViewController: UIViewController {
     
     func displayAlertMessageSegue (userMessage: String) {
         
-        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let myAlert = UIAlertController(title: "TouchID", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         
         let okAction = UIAlertAction(title: "Understood", style: .default, handler: { action in self.performSegue(withIdentifier: "FinishSegue", sender: self)})
         

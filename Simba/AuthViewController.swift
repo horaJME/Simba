@@ -120,8 +120,7 @@ class AuthViewController: UIViewController {
                                     
                                 }
                                 
-                                // Perform segue
-                                self.performSegue(withIdentifier: "SuccessSegue", sender: json["status"].stringValue)
+                                self.displayAlertMessageSegue (userMessage: "TouchID Authentication successful!")
                                 
                             case .failure(let error):
                                 print(error)
@@ -205,6 +204,38 @@ class AuthViewController: UIViewController {
         
     }
     
+    func displayAlertMessageSegue (userMessage: String) {
+        
+        let imageView = UIImageView(frame: CGRect(x:230,y:42,width:80,height:80))
+        
+        let myAlert = UIAlertController(title: "Authentication", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        var segue = ""
+        
+        if userMessage == "TouchID Authentication successful!"{
+        
+        imageView.image = #imageLiteral(resourceName: "TouchID")
+        
+        segue = "SuccessSegue"
+        
+        } else {
+            
+        imageView.image = #imageLiteral(resourceName: "TouchID2")
+            
+        segue = "AuthHomeSegue"
+            
+        }
+        
+        let okAction = UIAlertAction(title: "Understood", style: .default, handler: { action in self.performSegue(withIdentifier: segue, sender: self)})
+        
+        myAlert.addAction(okAction)
+        
+        myAlert.view.addSubview(imageView)
+        
+        self.present(myAlert, animated: true, completion: nil)
+        
+    }
+
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -218,10 +249,6 @@ class AuthViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "SuccessSegue") {
-            let destination = segue.destination as! SuccessViewController
-            destination.sent = sender as! String?
-        }
         if (segue.identifier == "UsePINSegue") {
             let destination = segue.destination as! AuthPINController
             destination.sent = sender as! String?

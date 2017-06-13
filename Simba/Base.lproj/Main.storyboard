@@ -405,6 +405,7 @@
                         <outlet property="PINText" destination="z3h-lt-piU" id="9dw-a6-OQk"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PINHomeSegue" id="wiA-Df-2GF"/>
                         <segue destination="MtP-rC-9Iw" kind="show" identifier="PINAuthSegue" id="jdQ-Xe-S6j"/>
+                        <segue destination="DvQ-G2-zMV" kind="show" identifier="TryAgainSegue" id="Shv-Wi-sPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXD-JU-28Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -555,7 +556,7 @@
                                     <constraint firstAttribute="width" constant="200" id="kFt-0h-fTR"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GWy-4b-D8v"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="GWy-4b-D8v"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-nw-06l">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="S2G-7h-49J"/>
@@ -570,57 +571,45 @@
                                             <constraint firstAttribute="height" constant="102" id="ZEp-Rw-85x"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication successful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-Nd-LEq">
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TouchID" translatesAutoresizingMaskIntoConstraints="NO" id="5hv-Og-pSb">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="T8o-pc-mlq"/>
-                                            <constraint firstAttribute="height" constant="136" id="n89-BR-AA6"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-JG-PCH">
-                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="Log out">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="ReactionButton:" destination="MtP-rC-9Iw" eventType="touchUpInside" id="Leq-Tt-QVA"/>
-                                            <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="Sa0-4i-b4W"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-JG-PCH">
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0039215686269999999" green="0.050980392159999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ReactionButton:" destination="MtP-rC-9Iw" eventType="touchUpInside" id="Leq-Tt-QVA"/>
+                                    <action selector="SendPIN:" destination="DvQ-G2-zMV" eventType="touchUpInside" id="Sa0-4i-b4W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dE9-nw-06l" firstAttribute="centerX" secondItem="2eD-IU-Owp" secondAttribute="centerX" id="2zX-iX-TPq"/>
-                            <constraint firstAttribute="bottom" secondItem="GWy-4b-D8v" secondAttribute="bottom" id="CBL-4K-5dn"/>
-                            <constraint firstItem="0Bq-Jb-89I" firstAttribute="top" secondItem="2Lo-QL-b3t" secondAttribute="bottom" constant="40" id="RZ7-64-neK"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerY" secondItem="5Wa-G8-WhJ" secondAttribute="centerY" id="9nt-LB-u1z"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="0Bq-Jb-89I" secondAttribute="centerX" id="FdM-Ql-SBa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ih2-JG-PCH" secondAttribute="trailing" constant="46" id="H51-E3-yOj"/>
+                            <constraint firstItem="0Bq-Jb-89I" firstAttribute="top" secondItem="2Lo-QL-b3t" secondAttribute="bottom" constant="25" id="RZ7-64-neK"/>
                             <constraint firstItem="0Bq-Jb-89I" firstAttribute="centerX" secondItem="dE9-nw-06l" secondAttribute="centerX" id="TGj-G4-PQO"/>
-                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerY" secondItem="5Wa-G8-WhJ" secondAttribute="centerY" id="Vax-Ze-BUM"/>
-                            <constraint firstItem="GWy-4b-D8v" firstAttribute="top" secondItem="2eD-IU-Owp" secondAttribute="top" id="fIe-Xa-Zlx"/>
-                            <constraint firstItem="GWy-4b-D8v" firstAttribute="leading" secondItem="2eD-IU-Owp" secondAttribute="leading" id="oeH-8X-Ryu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Wa-G8-WhJ" secondAttribute="trailing" constant="-75" id="Tdi-YE-XRW"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="leading" secondItem="2eD-IU-Owp" secondAttribute="leading" id="dh2-gD-r8u"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="bottom" secondItem="iQU-Md-3aA" secondAttribute="top" id="rN3-YH-Spp"/>
                             <constraint firstItem="dE9-nw-06l" firstAttribute="bottom" secondItem="2eD-IU-Owp" secondAttribute="bottom" constant="30" id="sPW-nI-WfO"/>
-                            <constraint firstItem="GWy-4b-D8v" firstAttribute="centerX" secondItem="5Wa-G8-WhJ" secondAttribute="centerX" id="uY7-Aj-JBg"/>
+                            <constraint firstItem="GWy-4b-D8v" firstAttribute="top" secondItem="2eD-IU-Owp" secondAttribute="top" id="tcd-em-4ub"/>
+                            <constraint firstItem="ih2-JG-PCH" firstAttribute="top" secondItem="5Wa-G8-WhJ" secondAttribute="bottom" constant="6" id="u15-18-eZ0"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AuthImage" destination="5hv-Og-pSb" id="SoC-eT-HuY"/>
-                        <outlet property="AuthResult" destination="ak3-Nd-LEq" id="2Jf-9E-6Ar"/>
-                        <outlet property="ReactButton" destination="ih2-JG-PCH" id="8RQ-Z5-z24"/>
-                        <segue destination="DvQ-G2-zMV" kind="show" identifier="TryAgainSegue" id="m3b-ef-z2L"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LogOutSegue" id="pIc-Kj-Flu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-JF-f2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="922"/>
+            <point key="canvasLocation" x="1920.8" y="921.58920539730138"/>
         </scene>
         <!--TouchID View Controller-->
         <scene sceneID="n6i-XU-PVH">
@@ -716,14 +705,14 @@
     </scenes>
     <resources>
         <image name="ID" width="170" height="170"/>
-        <image name="TouchID" width="169" height="169"/>
         <image name="background" width="667" height="621"/>
         <image name="detail" width="293" height="186"/>
         <image name="logo3" width="122" height="62"/>
+        <image name="menu" width="667" height="621"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m3b-ef-z2L"/>
+        <segue reference="Shv-Wi-sPo"/>
         <segue reference="jdQ-Xe-S6j"/>
-        <segue reference="pIc-Kj-Flu"/>
+        <segue reference="wiA-Df-2GF"/>
     </inferredMetricsTieBreakers>
 </document>
