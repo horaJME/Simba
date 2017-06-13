@@ -206,7 +206,7 @@ class AuthViewController: UIViewController {
     
     func displayAlertMessageSegue (userMessage: String) {
         
-        let imageView = UIImageView(frame: CGRect(x:230,y:42,width:80,height:80))
+        let imageView = UIImageView(frame: CGRect(x:235,y:43,width:80,height:80))
         
         let myAlert = UIAlertController(title: "Authentication", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         var segue = ""
