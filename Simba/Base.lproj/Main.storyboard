@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXD-JU-28Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="1007"/>
+            <point key="canvasLocation" x="1148" y="1251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ewy-66-Tht">
@@ -722,8 +722,8 @@
         <image name="logo3" width="122" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QYF-op-yiV"/>
-        <segue reference="wiA-Df-2GF"/>
+        <segue reference="m3b-ef-z2L"/>
         <segue reference="jdQ-Xe-S6j"/>
+        <segue reference="pIc-Kj-Flu"/>
     </inferredMetricsTieBreakers>
 </document>
