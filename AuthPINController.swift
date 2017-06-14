@@ -134,7 +134,7 @@ class AuthPINController: UIViewController {
         
         if userMessage == "PIN Authentication successful!"{
             
-            imageView.image = #imageLiteral(resourceName: "TouchID")
+            imageView.image = #imageLiteral(resourceName: "pin")
             
             segue = "PINAuthSegue"
             
