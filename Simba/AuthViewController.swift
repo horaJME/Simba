@@ -122,8 +122,8 @@ class AuthViewController: UIViewController {
                                 
                                 self.displayAlertMessageSegue (userMessage: "TouchID Authentication successful!")
                                 
-                            case .failure(let error):
-                                print(error)
+                            case .failure(let errorAlamofire):
+                                print(errorAlamofire)
                                 
                             }
                         }
@@ -132,7 +132,9 @@ class AuthViewController: UIViewController {
                         //Evaluating type of error that occured
                         if let evaluateError = error as? NSError {
                             let message = self.errorMessageForLAErrorCode(errorCode: evaluateError.code)
-                            self.displayAlertMessage(userMessage: message)
+                            OperationQueue.main.addOperation{
+                              self.displayAlertMessage(userMessage: message)
+                            }
                         }
                     }
                     
