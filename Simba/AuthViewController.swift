@@ -90,8 +90,8 @@ class AuthViewController: UIViewController {
             let authenticationContext = LAContext()
             var error: NSError?
             
-            if authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                authenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Touch the Touch ID sensor to authenticate.", reply: { (success: Bool, error: Error?) in
+            if authenticationContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+                authenticationContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Touch the Touch ID sensor to authenticate.", reply: { (success: Bool, error: Error?) in
                     //If successful reading fingerprint
                     if success {
                     
